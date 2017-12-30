@@ -1,0 +1,29 @@
+<div class="box">
+  <mat-card class="login-container">
+    <mat-toolbar>
+      <div class="mat-toolbar-tools">
+        <h2><span>Login Form</span></h2>
+      </div>
+    </mat-toolbar>
+
+    <mat-card-content>
+      <form (ngSubmit)="login()">
+        <mat-form-field class="">
+          <input matInput placeholder="用户名">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+          <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="mat-block">
+          <textarea matInput placeholder="验证码"></textarea>
+        </mat-form-field>
+
+        <button mat-button type="submit">提交</button>
+      </form>
+
+    </mat-card-content>
+  </mat-card>
+</div>
