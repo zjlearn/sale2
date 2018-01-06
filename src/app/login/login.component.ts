@@ -10,11 +10,11 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  user: FormGroup;
+  userForm: FormGroup;
   constructor(private http: HttpClient, private fb: FormBuilder) {
   }
   ngOnInit() {
-    this.user = this.fb.group({
+    this.userForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(2)]],
       password: ['', Validators.required],
       verifyCode: ['', Validators.required]
@@ -23,7 +23,12 @@ export class LoginComponent implements OnInit {
 
   login() {
     console.log('开始登录！！');
-    this.http.get('http://localhost:8080/user/hello').subscribe(data => {
+    const formModel = this.userForm.value;
+    console.log(formModel.name)
+    console.log(formModel.password)
+    console.log(formModel.verifyCode);
+
+    this.http.post('http://localhost:4200/xhr/user/login', formModel).subscribe(data => {
       // Read the result field from the JSON response.
       console.log(data);
     });
