@@ -1,6 +1,6 @@
 
 <mat-horizontal-stepper linear>
-  <mat-step [stepControl]="firstFormGroup" (ngSubmit)="">
+  <mat-step [stepControl]="userInfoForm" (ngSubmit)="register()">
     <form [formGroup]="userInfoForm">
       <ng-template matStepLabel>填写个人信息</ng-template>
       <mat-form-field>
@@ -19,11 +19,11 @@
         <input matInput placeholder="邀请码" formControlName="inviteCode" required>
       </mat-form-field>
       <div>
-        <button mat-button matStepperNext>下一步</button>
+        <button mat-button  type = "submit" matStepperNext>下一步</button>
       </div>
     </form>
   </mat-step>
-  <mat-step [stepControl]="secondFormGroup" (ngSubmit)="">
+  <mat-step [stepControl]="authenForm" (ngSubmit)="auth()" optional >
     <form [formGroup]="authenForm">
       <ng-template matStepLabel>实名认证</ng-template>
       <mat-form-field>
@@ -34,7 +34,7 @@
       </mat-form-field>
       <div>
         <button mat-button matStepperPrevious>上一步</button>
-        <button mat-button matStepperNext>下一步</button>
+        <button mat-button matStepperNext type="submit">下一步</button>
       </div>
     </form>
   </mat-step>
