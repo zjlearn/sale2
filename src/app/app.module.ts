@@ -18,7 +18,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {ProductService} from './shared/productService';
 import { ListProductsComponent } from './list-products/list-products.component';
 import {HttpClientModule} from '@angular/common/http';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -41,7 +41,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     MaterialModule,
     NgbootstrapModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]
