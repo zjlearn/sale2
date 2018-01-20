@@ -1,80 +1,68 @@
 
-<!--<mat-horizontal-stepper linear>-->
-  <!--<mat-step [stepControl]="userInfoForm" >-->
-    <!--<form [formGroup]="userInfoForm" (ngSubmit)="register()">-->
-      <!--<ng-template matStepLabel>填写个人信息</ng-template>-->
-      <!--<mat-form-field>-->
-        <!--<input matInput placeholder="手机号" formControlName="mobileNo" required>-->
-      <!--</mat-form-field>-->
-      <!--<mat-form-field>-->
-        <!--<input matInput placeholder="密码" formControlName="password" required>-->
-      <!--</mat-form-field>-->
-      <!--<mat-form-field>-->
-        <!--<input matInput placeholder="确认密码" formControlName="confirmPass" required>-->
-      <!--</mat-form-field>-->
-      <!--<mat-form-field>-->
-        <!--<input matInput placeholder="验证码" formControlName="verifyCode" required>-->
-      <!--</mat-form-field>-->
-      <!--<mat-form-field>-->
-        <!--<input matInput placeholder="邀请码" formControlName="inviteCode" required>-->
-      <!--</mat-form-field>-->
-      <!--<div>-->
-        <!--<button mat-button  type = "submit" matStepperNext>下一步</button>-->
-      <!--</div>-->
-    <!--</form>-->
-  <!--</mat-step>-->
-  <!--<mat-step [stepControl]="authenForm"  optional >-->
-    <!--<form [formGroup]="authenForm" (ngSubmit)="t()">-->
-      <!--<ng-template matStepLabel>实名认证</ng-template>-->
-      <!--<mat-form-field>-->
-        <!--<input matInput placeholder="姓名" formControlName="name" required>-->
-      <!--</mat-form-field>-->
-      <!--<mat-form-field>-->
-        <!--<input matInput placeholder="身份证" formControlName="idCard" required>-->
-      <!--</mat-form-field>-->
-      <!--<div>-->
-        <!--<button mat-button matStepperPrevious>上一步</button>-->
-        <!--<button mat-button matStepperNext type="submit">下一步</button>-->
-      <!--</div>-->
-    <!--</form>-->
-  <!--</mat-step>-->
-  <!--<mat-step>-->
-    <!--<ng-template matStepLabel>完成注册</ng-template>-->
-      <!--恭喜您已完成注册-->
-    <!--<div>-->
-      <!--<button mat-button matStepperPrevious>返回</button>-->
-    <!--</div>-->
-  <!--</mat-step>-->
-<!--</mat-horizontal-stepper>-->
+<mat-horizontal-stepper linear>
+  <mat-step [stepControl]="userInfoForm" >
+    <form [formGroup]="userInfoForm" (ngSubmit)="register()">
+      <ng-template matStepLabel>填写个人信息</ng-template>
+      <mat-form-field>
+        <input matInput placeholder="手机号" formControlName="mobileNo" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="密码" formControlName="password" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="确认密码" formControlName="confirmPass" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="验证码" formControlName="verifyCode" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="邀请码" formControlName="inviteCode" required>
+      </mat-form-field>
+      <div>
+        <button mat-button  type = "submit" matStepperNext>下一步</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="authenForm"  optional >
+    <form [formGroup] ="authenForm" (ngSubmit)="auth()" >
+      <ng-template matStepLabel>实名认证</ng-template>
+      <mat-form-field>
+        <input matInput placeholder="姓名" formControlName="realName" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="身份证号"  formControlName='idCard' required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>上一步</button>
+        <button mat-button matStepperNext type="submit">下一步</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>完成注册</ng-template>
+      恭喜您已完成注册
+    <div>
+      <button mat-button matStepperPrevious>返回</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>
 
-<form  (ngSubmit)="t()">
-  <div class="form-group">
-    <label class="center-block">Name:
-      <input class="form-control" >
-    </label>
-    <label class="center-block">Name:
-      <input class="form-control" >
-    </label>
+<form ngNoForm method="post" action="http://113.207.54.122:8011/p2p-dep/gateway.htm" >
+  <ng-template>IPS页面表单提交</ng-template>
+  <mat-form-field>
+    <input matInput placeholder="merchantID" name="merchantID" [(ngModel)]="merchantID" required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="operationType"  name='operationType' [(ngModel)]="operationType"   required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="request"  name='request' [(ngModel)]="request"  required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="sign"  name='sign' [(ngModel)]="sign"  required>
+  </mat-form-field>
+  <div>
+    <button mat-button  type="submit"> 提交 </button>
   </div>
-  <button  type="submit">下一步</button>
-</form>
-
-
-<form  (ngSubmit)="t()">
-  <div class="form-group">
-    <label class="center-block">Name:
-      <input class="form-control" ngModel="" name="sign">
-    </label>
-    <label class="center-block">Name:
-      <input class="form-control" name="request">
-    </label>
-    <label class="center-block">Name:
-      <input class="form-control" name="merchantID">
-    </label>
-    <label class="center-block">Name:
-      <input class="form-control" name="operationType">
-    </label>
-  </div>
-  <button  type="submit">下一步</button>
 </form>
 

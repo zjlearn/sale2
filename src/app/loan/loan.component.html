@@ -1,3 +1,67 @@
-<p>
-  loan works!
-</p>
+<!---->
+<form [formGroup]="loanInfoForm" (ngSubmit)="loan()">
+  <mat-horizontal-stepper linear>
+    <mat-step >
+
+      <ng-template matStepLabel>填写个人信息</ng-template>
+
+      <mat-form-field>
+        <mat-select placeholder="借款类型" formControlName="loanType">
+          <mat-option value="1">房贷</mat-option>
+          <mat-option value="2">车贷</mat-option>
+          <mat-option value="4">企业贷款</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="借款金额" formControlName="loanAmount">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="预期年化收益" formControlName="expectRate">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-select placeholder="借款期限" formControlName="duration">
+          <mat-option value="1">1个月</mat-option>
+          <mat-option value="2">2个月</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="申请人姓名" formControlName="realName">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="手机验证码" formControlName="verifyCode">
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperNext>下一步</button>
+      </div>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>填写资产/信用信息</ng-template>
+      <mat-form-field>
+        <input matInput placeholder="房屋位置" formControlName="position" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="房屋面积" formControlName='area' required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="车型" formControlName='carModel' required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>上一步</button>
+        <!--提交信息-->
+        <button mat-button matStepperNext type="submit">下一步</button>
+      </div>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>完成申请</ng-template>
+      您已完成借款申请， 工作人员会尽快为您审核!
+      <div>
+        <button mat-button matStepperPrevious>调到个人页面</button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+</form>

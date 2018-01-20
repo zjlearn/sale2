@@ -1,3 +1,9 @@
-<p>
-  invest works!
-</p>
+<!--项目选择按钮-->
+<div>
+</div>
+<app-list-products></app-list-products>
+<!--分页-->
+<mat-paginator  itemsPerPageLabel= "每页记录数" [length]="100"
+               [pageSize]="10"
+               [pageSizeOptions]="[5, 10, 25, 100]">
+</mat-paginator>

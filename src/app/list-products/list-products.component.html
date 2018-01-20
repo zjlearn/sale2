@@ -1,26 +1,68 @@
-<ul *ngFor="let product of products" class="container">
-  <li class="row item ">
-    <div class="col col-lg-2">
-      <div>{{product.name}}</div>
-      <div>{{product.num}}</div>
-    </div>
-    <div class="col col-lg-2">
-      <div>{{product.rate}}</div>
-      <div>xxxxxxx</div>
-    </div>
-    <div class="col col-lg-2">
-      <div>{{product.duration}}</div>
-      <div>xxxxxxx</div>
-    </div>
-    <div class="col col-lg-2">
-      <div>{{product.amount-product.completed}}</div>
-      <div>xxxxxxx</div>
-    </div>
-    <div class="col col-lg-1">
-      <div class="progress" style="height: 10px;">
-        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-      </div>
-      <button type="button" class="btn btn-primary btn-sm" submit="">Primary</button>
-    </div>
-  </li>
-</ul>
+<!--<ul *ngFor="let product of products" class="container">-->
+  <!--<li class="row item ">-->
+    <!--<div class="col col-lg-2">-->
+      <!--<div>{{product.name}}</div>-->
+      <!--<div>{{product.num}}</div>-->
+    <!--</div>-->
+    <!--<div class="col col-lg-2">-->
+      <!--<div>{{product.rate}}</div>-->
+      <!--<div>xxxxxxx</div>-->
+    <!--</div>-->
+    <!--<div class="col col-lg-2">-->
+      <!--<div>{{product.duration}}</div>-->
+      <!--<div>xxxxxxx</div>-->
+    <!--</div>-->
+    <!--<div class="col col-lg-2">-->
+      <!--<div>{{product.amount-product.completed}}</div>-->
+      <!--<div>xxxxxxx</div>-->
+    <!--</div>-->
+    <!--<div class="col col-lg-1">-->
+      <!--<div class="progress" style="height: 10px;">-->
+        <!--<div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>-->
+      <!--</div>-->
+      <!--<button type="button" class="btn btn-primary btn-sm" submit="">Primary</button>-->
+    <!--</div>-->
+  <!--</li>-->
+<!--</ul>-->
+
+
+<div class="product-table mat-elevation-z8">
+  <mat-table #table [dataSource]="dataSource">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> 项目名 </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="rate">
+      <mat-header-cell *matHeaderCellDef> 收益率 </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.rate}} </mat-cell>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="duration">
+      <mat-header-cell *matHeaderCellDef> 期限 </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.duration}} </mat-cell>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="amount">
+      <mat-header-cell *matHeaderCellDef> 金额 </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.amount}} </mat-cell>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="completed">
+      <mat-header-cell *matHeaderCellDef> 进度 </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.completed}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>

@@ -19,6 +19,8 @@ import {ProductService} from './shared/productService';
 import { ListProductsComponent } from './list-products/list-products.component';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { IpsFormComponent } from './ips-form/ips-form.component';
+import { SimpleRegisterComponent } from './simple-register/simple-register.component';
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     RegisterComponent,
     HomeComponent,
     AboutUsComponent,
-    ListProductsComponent
+    ListProductsComponent,
+    IpsFormComponent,
+    SimpleRegisterComponent
   ],
   imports: [
     BrowserModule,

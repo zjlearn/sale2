@@ -3,7 +3,8 @@ import {CommonModule} from '@angular/common';
 import {
   MatButtonModule, MatToolbarModule, MatIconModule,
   MatCardModule, MatSidenavModule, MatInputModule, MatTooltipModule, MatOptionModule, MatSelectModule, MatStepperModule,
-  MatListModule, MatProgressBarModule, MatPaginatorModule, MatProgressSpinnerModule
+  MatListModule, MatProgressBarModule, MatPaginatorModule, MatProgressSpinnerModule, MatCheckboxModule, MatSortModule, MatTableModule,
+  MatTabsModule
 } from '@angular/material';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -26,6 +27,10 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatListModule,
     MatProgressBarModule,
     MatPaginatorModule,
+    MatCheckboxModule,
+    MatSortModule,
+    MatTableModule,
+    MatTabsModule,
     BrowserAnimationsModule
   ],
   exports: [
@@ -44,6 +49,10 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatListModule,
     MatProgressBarModule,
     MatPaginatorModule,
+    MatCheckboxModule,
+    MatSortModule,
+    MatTableModule,
+    MatTabsModule,
     BrowserAnimationsModule
   ],
   declarations: []

@@ -19,3 +19,11 @@
 .button {
   color: aqua;
 }
+
+#verifybutton{
+  float: right;
+}
+
+#itemCheck{
+  width: auto;
+}
