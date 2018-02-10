@@ -1,25 +1,31 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, OnChanges, OnInit, SimpleChange} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
-import {IPSMessage} from '../shared/IPSMessage';
-import {Observable} from 'rxjs/Observable';
+import {HttpClient} from '@angular/common/http';
+import {ActivatedRoute, Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
-export class RegisterComponent implements OnInit {
+export class RegisterComponent implements OnInit, OnChanges {
 
   userInfoForm: FormGroup;
   authenForm: FormGroup;
+
+  ipsForm: FormGroup;
 
   sign: string;
   request: string;
   operationType: string;
   merchantID: string;
 
-  constructor(private _formBuilder: FormBuilder, private http: HttpClient) {
+  constructor(private _formBuilder: FormBuilder,
+              private http: HttpClient,
+              private elRef: ElementRef,
+              private route: ActivatedRoute,
+              private router: Router) {
   }
 
   ngOnInit() {
@@ -34,6 +40,13 @@ export class RegisterComponent implements OnInit {
       realName: [''],
       idCard: ['']
     });
+    this.ipsForm = this._formBuilder.group({
+      sign: [''],
+      request: [''],
+      operationType: [''],
+      merchantID: ['']
+    })
+    ;
   }
 
   // 注册逻辑
@@ -45,23 +58,52 @@ export class RegisterComponent implements OnInit {
   }
 
   // 实名认证过程
-  auth(): Observable<any> {
+  auth() {
+    // this.http.post('http://localhost:4200/xhr/userRegister/sign', this.authenForm.value).subscribe(data => {
+    //   this.sign = data['sign'];
+    //   this.request = data['request'];
+    //   this.operationType = data['operationType'];
+    //   this.merchantID = data['merchantID'];
+    // });
     this.http.post('http://localhost:4200/xhr/userRegister/sign', this.authenForm.value).subscribe(data => {
-      this.sign = data['sign'];
-      this.operationType = data['operationType'];
-      this.request = data ['request'];
-      this.merchantID = data['merchantID'];
+      this.ipsForm.get('sign').setValue( data['sign']);
+      this.ipsForm.get('request').setValue(data['request']);
+      this.ipsForm.get('operationType').setValue(data['operationType']);
+      this.ipsForm.get('merchantID').setValue(data['merchantID']);
     });
-    console.log('获取到object');
-    console.log(this.request);
-    const body = new HttpParams()
-      .set('sign', this.sign)
-      .set('request', this.request)
-      .set('merchantID', this.merchantID)
-      .set('operationType', this.operationType);
-    return this.http.post('http://113.207.54.122:8011/p2p-dep/gateway.htm', body.toString(), {
-      headers: new HttpHeaders()
-        .set('Content-Type', 'application/x-www-form-urlencoded')
-    });
+    this.router.navigate(['/ipsForm']);
   }
+
+  ipsSubmit(event: any) {
+    // 自动提交表单
+    console.log(event)
+    const test = this.elRef.nativeElement.querySelector('#ipsForm');
+    console.log(test.valueOf());
+    console.log('haha ipsForm');
+    test.submit();
+  }
+
+  ngOnChanges(changes: { [propKey: string]: SimpleChange }): void {
+    let notFirstchange = true;
+    for (const propName in changes) {
+      const changedProp = changes[propName];
+      const to = JSON.stringify(changedProp.currentValue);
+      if (changedProp.isFirstChange()) {
+        console.log(`Initial value of ${propName} set to ${to}`);
+        break;
+      } else {
+        notFirstchange = false;
+        const from = JSON.stringify(changedProp.previousValue);
+        console.log(`${propName} changed from ${from} to ${to}`);
+      }
+    }
+    if (! notFirstchange) {
+      // // 自动提交表单
+      const test = this.elRef.nativeElement.querySelector('#ipsForm');
+      console.log(test);
+      console.log('haha ipsForm');
+      test.submit();
+    }
+  }
+
 }

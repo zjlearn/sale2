@@ -1,6 +1,5 @@
-
 <mat-horizontal-stepper linear>
-  <mat-step [stepControl]="userInfoForm" >
+  <mat-step [stepControl]="userInfoForm" optional>
     <form [formGroup]="userInfoForm" (ngSubmit)="register()">
       <ng-template matStepLabel>填写个人信息</ng-template>
       <mat-form-field>
@@ -19,18 +18,18 @@
         <input matInput placeholder="邀请码" formControlName="inviteCode" required>
       </mat-form-field>
       <div>
-        <button mat-button  type = "submit" matStepperNext>下一步</button>
+        <button mat-button type="submit" matStepperNext>下一步</button>
       </div>
     </form>
   </mat-step>
-  <mat-step [stepControl]="authenForm"  optional >
-    <form [formGroup] ="authenForm" (ngSubmit)="auth()" >
+  <mat-step [stepControl]="authenForm" optional>
+    <form [formGroup]="authenForm" (ngSubmit)="auth()">
       <ng-template matStepLabel>实名认证</ng-template>
       <mat-form-field>
         <input matInput placeholder="姓名" formControlName="realName" required>
       </mat-form-field>
       <mat-form-field>
-        <input matInput placeholder="身份证号"  formControlName='idCard' required>
+        <input matInput placeholder="身份证号" formControlName='idCard' required>
       </mat-form-field>
       <div>
         <button mat-button matStepperPrevious>上一步</button>
@@ -40,29 +39,49 @@
   </mat-step>
   <mat-step>
     <ng-template matStepLabel>完成注册</ng-template>
-      恭喜您已完成注册
+    恭喜您已完成注册
     <div>
       <button mat-button matStepperPrevious>返回</button>
     </div>
   </mat-step>
 </mat-horizontal-stepper>
 
-<form ngNoForm method="post" action="http://113.207.54.122:8011/p2p-dep/gateway.htm" >
-  <ng-template>IPS页面表单提交</ng-template>
-  <mat-form-field>
-    <input matInput placeholder="merchantID" name="merchantID" [(ngModel)]="merchantID" required>
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput placeholder="operationType"  name='operationType' [(ngModel)]="operationType"   required>
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput placeholder="request"  name='request' [(ngModel)]="request"  required>
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput placeholder="sign"  name='sign' [(ngModel)]="sign"  required>
-  </mat-form-field>
-  <div>
-    <button mat-button  type="submit"> 提交 </button>
-  </div>
-</form>
+<!--<form ngNoForm id="ipsForm" action="http://113.207.54.122:8011/p2p-dep/gateway.htm">-->
+<!--<ng-template>IPS页面表单提交</ng-template>-->
+<!--<mat-form-field>-->
+<!--<input matInput placeholder="merchantID" name="merchantID" [(ngModel)]="merchantID" required>-->
+<!--</mat-form-field>-->
+<!--<mat-form-field>-->
+<!--<input matInput placeholder="operationType" name='operationType' [(ngModel)]="operationType" required>-->
+<!--</mat-form-field>-->
+<!--<mat-form-field>-->
+<!--<input matInput placeholder="request" name='request' [(ngModel)]="request" required>-->
+<!--</mat-form-field>-->
+<!--<mat-form-field>-->
+<!--<input matInput placeholder="sign" name='sign' [(ngModel)]="sign" required (ngModelChange)="ipsSubmit($event)">-->
+<!--</mat-form-field>-->
+<!--<div>-->
+<!--<button mat-button type="submit"> 提交</button>-->
+<!--</div>-->
+<!--</form>-->
 
+<!--<form ngNoForm id="ipsForm" [formGroup]="ipsForm" method="post" action="http://113.207.54.122:8011/p2p-dep/gateway.htm">-->
+  <!--<ng-template>IPS页面表单提交</ng-template>-->
+  <!--<mat-form-field>-->
+    <!--<input matInput placeholder="merchantID" name="merchantID" formControlName="merchantID" required>-->
+  <!--</mat-form-field>-->
+  <!--<mat-form-field>-->
+    <!--<input matInput placeholder="operationType" name='operationType' formControlName="operationType" required>-->
+  <!--</mat-form-field>-->
+  <!--<mat-form-field>-->
+    <!--<input matInput placeholder="request" name='request' formControlName="request" required>-->
+  <!--</mat-form-field>-->
+  <!--<mat-form-field>-->
+    <!--<input matInput placeholder="sign" name='sign' formControlName="sign" required (ngModelChange)="ipsSubmit($event)">-->
+  <!--</mat-form-field>-->
+  <!--<div>-->
+    <!--<button mat-button type="submit"> 提交</button>-->
+  <!--</div>-->
+<!--</form>-->
+
+<!--<app-ips-form [sign]="sign" [merchantID]="merchantID" [request]="request" [operationType]="operationType"></app-ips-form>-->

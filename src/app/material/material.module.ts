@@ -4,7 +4,7 @@ import {
   MatButtonModule, MatToolbarModule, MatIconModule,
   MatCardModule, MatSidenavModule, MatInputModule, MatTooltipModule, MatOptionModule, MatSelectModule, MatStepperModule,
   MatListModule, MatProgressBarModule, MatPaginatorModule, MatProgressSpinnerModule, MatCheckboxModule, MatSortModule, MatTableModule,
-  MatTabsModule
+  MatTabsModule, MatButtonToggleModule
 } from '@angular/material';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -31,6 +31,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatSortModule,
     MatTableModule,
     MatTabsModule,
+    MatButtonToggleModule,
     BrowserAnimationsModule
   ],
   exports: [
@@ -53,6 +54,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatSortModule,
     MatTableModule,
     MatTabsModule,
+    MatButtonToggleModule,
     BrowserAnimationsModule
   ],
   declarations: []

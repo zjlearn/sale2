@@ -1,21 +1,17 @@
 .product-table {
   display: flex;
   flex-direction: column;
-  min-width: 300px;
+  width: auto;
+  justify-content: center;
 }
 
 .mat-table {
-  max-height: 500px;
+  max-width: 60%;
 }
 
 .mat-header-cell.mat-sort-header-sorted {
   color: black;
 }
-
-.product-table{
-  height: 300px;
-}
-
 .mat-column-select {
   overflow: initial;
 }

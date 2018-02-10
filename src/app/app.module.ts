@@ -21,6 +21,13 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { IpsFormComponent } from './ips-form/ips-form.component';
 import { SimpleRegisterComponent } from './simple-register/simple-register.component';
+import { ProductInfoComponent } from './product-info/product-info.component';
+import { OverviewComponent } from './my-account/overview/overview.component';
+import { MyNavComponent } from './my-account/my-nav/my-nav.component';
+import { MyLoanComponent } from './my-account/my-loan/my-loan.component';
+import { MyInvestComponent } from './my-account/my-invest/my-invest.component';
+import { MySidebarComponent } from './my-account/my-sidebar/my-sidebar.component';
+import { MyRootComponent } from './my-account/my-root/my-root.component';
 
 
 @NgModule({
@@ -37,7 +44,14 @@ import { SimpleRegisterComponent } from './simple-register/simple-register.compo
     AboutUsComponent,
     ListProductsComponent,
     IpsFormComponent,
-    SimpleRegisterComponent
+    SimpleRegisterComponent,
+    ProductInfoComponent,
+    OverviewComponent,
+    MyNavComponent,
+    MyLoanComponent,
+    MyInvestComponent,
+    MySidebarComponent,
+    MyRootComponent
   ],
   imports: [
     BrowserModule,

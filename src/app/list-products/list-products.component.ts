@@ -12,13 +12,14 @@ export class ListProductsComponent implements OnInit {
 
   products: Product[];
   displayedColumns = ['name', 'rate', 'duration', 'amount', 'completed'];
-  dataSource = new MatTableDataSource(this.products);
+  dataSource;
   @ViewChild(MatSort) sort: MatSort;
 
   constructor(private  productService: ProductService) { }
 
   ngOnInit() {
     this.products = this.productService.getProducts();
+    this.dataSource = new MatTableDataSource(this.products);
   }
   /**
    * Set the sort after the view init since this component will

@@ -1,5 +1,5 @@
 <!--可以实现登录和注册的双重功能-->
-<mat-tab-group>
+<mat-tab-group class="box">
   <mat-tab label="登录">
     <mat-card class="login-container">
       <mat-toolbar>
@@ -16,7 +16,7 @@
 
           <mat-form-field class="mat-block">
             <input matInput placeholder="验证码" formControlName="verifyCode">
-            <button mat-button (click)="getVerifyCode()" id="verifybutton">获取验证码</button>
+            <button mat-button (click)="getVerifyCode()" class="verifybutton">获取验证码</button>
           </mat-form-field>
 
           <mat-form-field>
@@ -25,7 +25,7 @@
             <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
           </mat-form-field>
 
-          <mat-checkbox id="itemCheck">我已阅读并同意《***平台注册服务协议》
+          <mat-checkbox class="itemCheck">我已阅读并同意《***平台注册服务协议》
             《***平台注册服务协议》《***隐私权政策》
           </mat-checkbox>
 
@@ -35,7 +35,38 @@
     </mat-card>
   </mat-tab>
   <mat-tab label="注册">
-    Content 2
+    <mat-card class="login-container">
+      <mat-toolbar>
+        <div class="mat-toolbar-tools">
+          <h2><span>登录</span></h2>
+        </div>
+      </mat-toolbar>
+
+      <mat-card-content>
+        <form (ngSubmit)="login()" noValidate [formGroup]="userForm">
+          <mat-form-field>
+            <input matInput placeholder="手机号或者邮箱" formControlName="name">
+          </mat-form-field>
+
+          <mat-form-field class="mat-block">
+            <input matInput placeholder="验证码" formControlName="verifyCode">
+            <button mat-button (click)="getVerifyCode()" class="verifybutton">获取验证码</button>
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'"
+                   formControlName="password">
+            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+          </mat-form-field>
+
+          <mat-checkbox calss ="itemCheck">我已阅读并同意《***平台注册服务协议》
+            《***平台注册服务协议》《***隐私权政策》
+          </mat-checkbox>
+
+          <button mat-button type="submit">立即登录</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
   </mat-tab>
 </mat-tab-group>
 
