@@ -45,7 +45,7 @@
 .nav li a {
   display: flex;
   align-items: center;
-  color: rgba(115, 24, 24, .8);
+  color: rgb(255, 14, 24);
   margin: 0 15px;
   border-radius: 3px;
   -webkit-transition: all 400ms;
@@ -63,11 +63,12 @@
 
 .nav li a span {
   margin-left: 20px;
+  color: black;
 }
 
 .active a, .active a:hover {
-  *color: rgba(0,0,0,.6) !important;
-  *background-color: #fff !important;
+  /**color: rgba(0,0,0,.6) !important;*/
+  /**background-color: #fff !important;*/
   box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(60, 72, 88, 0.4);
   -webkit-transition: all 400ms;
   -moz-transition: all 400ms;
