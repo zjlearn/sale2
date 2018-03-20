@@ -1,0 +1,45 @@
+<div class="container">
+  <h3>消息中心</h3>
+  <mat-divider></mat-divider>
+  <div class="container">
+    <div class="row d-flex justify-content-start">
+      <mat-select class="col-lg-2" placeholder="消息类别">
+        <mat-option *ngFor="let messageType of messageTypes" [value]="messageType.type">
+          {{ messageType.desc }}
+        </mat-option>
+      </mat-select>
+      <mat-select class="col-lg-2" placeholder="消息状态">
+        <mat-option *ngFor="let messageType of messageTypes" [value]="messageType.type">
+          {{ messageType.desc }}
+        </mat-option>
+      </mat-select>
+
+    </div>
+    <mat-divider></mat-divider>
+
+    <!--消息过滤的结果展示-->
+    <mat-table #table [dataSource]="dataSource">
+      <!-- Position Column -->
+      <ng-container matColumnDef="messageType">
+        <mat-header-cell *matHeaderCellDef> 消息类型 </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.messageType}} </mat-cell>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="content">
+        <mat-header-cell *matHeaderCellDef> 消息内容 </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.content}} </mat-cell>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="time">
+        <mat-header-cell *matHeaderCellDef> 发送时间 </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.time}} </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
+  </div>
+</div>

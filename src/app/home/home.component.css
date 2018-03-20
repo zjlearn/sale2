@@ -1,0 +1,333 @@
+/*安全性介绍的样式*/
+.newbee {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  overflow: hidden;
+}
+
+.newbee .new-center {
+  width: 1080px;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.newbee .new-center ul {
+  width: 1080px;
+  min-height: 80px;
+  padding-top: 22px;
+  padding-bottom: 20px;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+.newbee .new-center ul li {
+  width: 260px;
+  padding-left: 50px;
+  padding-right: 50px;
+  float: left;
+  position: relative;
+}
+
+.newbee .new-center ul li a {
+  width: 260px;
+  display: block;
+  position: relative;
+}
+
+a, a:link, a:visited, a:hover, a:active {
+  color: #2c66ab;
+}
+
+.newbee .new-center ul li .label-box {
+  width: 150px;
+  float: left;
+  padding-left: 30px;
+}
+
+.newbee .new-center ul li .label-box em {
+  width: 180px;
+  display: block;
+  line-height: 35px;
+  font-size: 18px;
+  color: #000;
+}
+
+.newbee .new-center ul li .label-box .label-desc {
+  width: 200px;
+  display: block;
+  line-height: 18px;
+  font-size: 12px;
+  color: #8d8d8d;
+}
+
+/*产品推荐模块的样式*/
+.premium-container{
+  width: 1080px;
+  margin: 0 auto;
+}
+
+.fund-container{
+  background-color: #ffffff;
+}
+
+div{
+  display: block;
+}
+
+.premium-container .premium-top-l{
+  width: 1080px;
+  height: 20px;
+  padding: 37px 0 20px;
+  background-color: #f2f2f2;
+}
+
+.premium-container .premium-top-l .l-title {
+  width: 500px;
+  height: 20px;
+  float: left;
+}
+premium-container .plan {
+  padding: 35px 0;
+  height: 63px;
+  transition: all .2s linear;
+  cursor: pointer;
+  position: relative;
+  z-index: 999;
+}
+
+
+.clearfix {
+  zoom: 1;
+}
+
+.premium-container .plan .p-rate {
+  width: 200px;
+  text-align: center;
+  font-size: 30px;
+  color: #ff782d;
+}
+
+.premium-container .plan .p-month, .premium-container .plan .p-title {
+  border-left: 1px solid #f3f3f3;
+  text-align: center;
+}
+
+.premium-container .plan .p-month {
+  width: 229px;
+}
+
+.premium-container .plan>div {
+  float: left;
+}
+
+.premium-container .plan .pt7 {
+  padding-top: 7px;
+}
+
+.premium-container .plan .p-join {
+  display: block;
+  width: 135px;
+  height: 62px;
+  text-align: center;
+}
+
+.plan:hover{
+  box-shadow:0px 0px 2px 3px #000;
+}
+
+.novice .plan .p-title .p-title-text {
+  color: #333;
+  width: 460px;
+  font-size: 20px;
+  height: 62px;
+  line-height: 62px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+}
+
+.premium-container .plan .p-title .p-title-text {
+  color: #333;
+  width: 460px;
+  font-size: 20px;
+  height: 62px;
+  line-height: 62px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+}
+
+
+/*立马理财产品推荐模块对应的css*/
+.box .box-title {
+  padding-top: 18px;
+  line-height: 52px;
+  font-size: 22px;
+  color: #333;
+  position: relative;
+}
+
+.box .box-content {
+  width: 100%;
+}
+.f-cb {
+  display: block;
+  zoom: 1;
+}
+
+.pro-desc {
+  width: 160px;
+  padding: 0 30px;
+  font-size: 16px;
+  background: url(//www.lmlc.com/cdn/desktop/index/img/blue_bg.85f89ed536.jpg) left top no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  position: relative;
+}
+
+.f-fl {
+  float: left;
+}
+.product-wrap {
+  width: 920px;
+  -webkit-box-shadow: 0 0 12px #d9d9d9;
+  box-shadow: 0 0 12px #d9d9d9;
+}
+
+.f-fr{
+  float: right;
+}
+
+.product-wrap dl {
+  height: 69px;
+  font-size: 14px;
+  color: #333;
+  padding: 18px 0 22px;
+  border-bottom: 1px solid #eee;
+}
+.product-wrap dl .name {
+  width: 240px;
+  padding-left: 40px;
+}
+
+.product-wrap dl .name {
+  width: 240px;
+  padding-left: 40px;
+}
+
+.product-wrap dl .rate {
+  width: 130px;
+  padding-right: 0;
+}
+
+.product-wrap dl .day {
+  width: 130px;
+  text-align: center;
+}
+.product-wrap dl dd {
+  padding-right: 20px;
+}
+
+.product-wrap dl dd {
+  padding-right: 20px;
+}
+
+.product-wrap dl .process {
+  width: 100px;
+  padding: 0;
+  text-align: center;
+}
+
+.product-wrap dl .oper {
+  padding-right: 25px;
+  padding-top: 17px;
+  width: 150px;
+  text-align: center;
+  position: relative;
+}
+
+dl .title {
+  font-size: 14px;
+}
+
+.product-wrap dl .tit {
+  font-size: 18px;
+  color: #333;
+  line-height: 38px;
+}
+
+.f-nowrap {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: keep-all;
+  word-wrap: normal;
+}
+
+.u-tag {
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+.u-tag-lima {
+  color: #fff;
+  background-color: #e5a33b;
+}
+
+.u-tag {
+  display: inline-block;
+  padding: 0 4px;
+  font-size: 12px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.f-cb:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.product-wrap dl .desc {
+  font-size: 12px;
+  color: #999;
+  line-height: 30px;
+}
+
+.u-tag-feature {
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.u-tag-feature {
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.u-tag {
+  display: inline-block;
+  padding: 0 4px;
+  font-size: 12px;
+  height: 18px;
+  /* line-height: 18px; */
+  text-align: center;
+}
+
+:focus {
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+.product-wrap dl:hover {
+  -webkit-box-shadow: 0 0 24px #e5e5e5;
+  box-shadow: 0 0 24px #e5e5e5;
+  -webkit-transition: .2s;
+  transition: .2s;
+}

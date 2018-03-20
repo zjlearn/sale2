@@ -28,6 +28,15 @@ import { MyLoanComponent } from './my-account/my-loan/my-loan.component';
 import { MyInvestComponent } from './my-account/my-invest/my-invest.component';
 import { MySidebarComponent } from './my-account/my-sidebar/my-sidebar.component';
 import { MyRootComponent } from './my-account/my-root/my-root.component';
+import { MessageComponent } from './my-account/message/message.component';
+import { RecordComponent } from './my-account/record/record.component';
+import { TopHeaderComponent } from './shared/top-header/top-header.component';
+import { SecondHeaderComponent } from './shared/second-header/second-header.component';
+import { HelpComponent } from './help-center/help/help.component';
+import { LoginHelpComponent } from './help-center/login-help/login-help.component';
+import { PwHelpComponent } from './help-center/pw-help/pw-help.component';
+import { ReauthHelpComponent } from './help-center/reauth-help/reauth-help.component';
+import { TempComponent } from './help-center/temp/temp.component';
 
 
 @NgModule({
@@ -51,7 +60,16 @@ import { MyRootComponent } from './my-account/my-root/my-root.component';
     MyLoanComponent,
     MyInvestComponent,
     MySidebarComponent,
-    MyRootComponent
+    MyRootComponent,
+    MessageComponent,
+    RecordComponent,
+    TopHeaderComponent,
+    SecondHeaderComponent,
+    HelpComponent,
+    LoginHelpComponent,
+    PwHelpComponent,
+    ReauthHelpComponent,
+    TempComponent
   ],
   imports: [
     BrowserModule,

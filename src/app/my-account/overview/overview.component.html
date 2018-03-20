@@ -1,2 +1,54 @@
-<app-my-sidebar></app-my-sidebar>
-<router-outlet></router-outlet>
+<div class="container">
+
+  <div class="row">
+    <div class="col-lg-5 col-md-5">
+      <div>
+        <span>最新收益:</span>
+        <span class="profit">0.00</span>
+        <em>元</em>
+      </div>
+
+      <div>
+        <span>累计收益:</span>
+        <span class="profit">0.00</span>
+        <em>元</em>
+      </div>
+    </div>
+
+    <div class="col-lg-5 col-md-5">
+      <div class="" id="asset">
+        <div>
+          <span class="totalAsset">0.00</span>
+          <em>元</em>
+        </div>
+        <p>总资产</p>
+      </div>
+      <mat-divider [vertical]="true"></mat-divider>
+      <div>
+        <span class="restAsset">0.00</span>
+        <em>元</em>
+        <p>账户余额</p>
+      </div>
+      <mat-divider vertical="true"></mat-divider>
+    </div>
+    <div class="col-lg-2 col-md-2 d-flex flex-column ">
+      <button mat-raised-button color="primary">充值</button>
+      <button mat-raised-button color="accent">提现</button>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  <mat-divider></mat-divider>
+  <div>
+    <h4>全部资产占比</h4>
+  </div>
+</div>
+
+

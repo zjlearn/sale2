@@ -1,0 +1,1796 @@
+.carousel {
+  position: relative;
+  margin: 0;
+  height: 500px;
+  overflow: hidden
+}
+
+.carousel a, .carousel a:hover {
+  text-decoration: none
+}
+
+.carousel [role=button] {
+  cursor: pointer
+}
+
+.carousel-inner {
+  width: 100%;
+  height: 100%
+}
+
+.carousel-inner > .item {
+  display: block;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%
+}
+
+.carousel-inner > .item > img {
+  width: 100%;
+  height: 100%
+}
+
+.carousel-inner > .item .item-ctn {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-position: center top;
+  background-repeat: no-repeat
+}
+
+.carousel-inner > .item.active {
+  display: block;
+  z-index: 5
+}
+
+.carousel-indicators {
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  width: 60%;
+  margin-left: -30%;
+  text-align: center;
+  list-style: none;
+  line-height: 0;
+  font-size: 0;
+  z-index: 20;
+  padding: 10px
+}
+
+.carousel-indicators li {
+  display: inline-block;
+  width: 25px;
+  height: 6px;
+  margin-right: 16px;
+  background: #FFF;
+  opacity: .5;
+  filter: alpha(opacity=50);
+  cursor: pointer;
+  *float: left
+}
+
+.carousel-indicators li.active, .carousel-indicators li:hover {
+  opacity: .9;
+  filter: alpha(opacity=90)
+}
+
+.carousel-control {
+  position: absolute;
+  z-index: 30;
+  top: 50%;
+  height: 54px;
+  width: 38px;
+  margin-top: -27px;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  color: #FFF;
+  cursor: pointer
+}
+
+.carousel-control.prev {
+  left: 24px
+}
+
+.carousel-control.prev i {
+  background: url(//www.lmlc.com/cdn/.remote/finance/src/desktop/ui/carousel/img/prev.c7df24e0ab.png) no-repeat
+}
+
+.carousel-control.next {
+  right: 24px
+}
+
+.carousel-control.next i {
+  background: url(//www.lmlc.com/cdn/.remote/finance/src/desktop/ui/carousel/img/next.263eda8f8e.png) no-repeat
+}
+
+.carousel-control i {
+  display: inline-block;
+  width: 17px;
+  height: 32px;
+  margin-top: 10px
+}
+
+.carousel-control .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  -webkit-box-shadow: 0 0 3px #333;
+  box-shadow: 0 0 3px #333;
+  opacity: .2;
+  filter: alpha(opacity=20);
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease
+}
+
+.carousel-control .bg:hover {
+  opacity: .35;
+  filter: alpha(opacity=35)
+}
+
+.carousel.slide .item {
+  display: block;
+  position: absolute;
+  left: -100%;
+  top: 0
+}
+
+.carousel.slide .item.active {
+  left: 0
+}
+
+.carousel.slide .item.outPrev {
+  -webkit-animation: 1s ease-in-out 0s normal forwards 1 slideOutPrev;
+  animation: 1s ease-in-out 0s normal forwards 1 slideOutPrev
+}
+
+.carousel.slide .item.outNext {
+  -webkit-animation: 1s ease-in-out 0s normal forwards 1 slideOutNext;
+  animation: 1s ease-in-out 0s normal forwards 1 slideOutNext
+}
+
+.carousel.slide .item.inPrev {
+  -webkit-animation: 1s ease-in-out 0s normal forwards 1 slideInPrev;
+  animation: 1s ease-in-out 0s normal forwards 1 slideInPrev
+}
+
+.carousel.slide .item.inNext {
+  -webkit-animation: 1s ease-in-out 0s normal forwards 1 slideInNext;
+  animation: 1s ease-in-out 0s normal forwards 1 slideInNext
+}
+
+@-webkit-keyframes slideOutPrev {
+  0% {
+    left: 0
+  }
+  100% {
+    left: 100%
+  }
+}
+
+@-webkit-keyframes slideOutNext {
+  0% {
+    left: 0
+  }
+  100% {
+    left: -100%
+  }
+}
+
+@-webkit-keyframes slideInPrev {
+  0% {
+    left: -100%
+  }
+  100% {
+    left: 0
+  }
+}
+
+@-webkit-keyframes slideInNext {
+  0% {
+    left: 100%
+  }
+  100% {
+    left: 0
+  }
+}
+
+@keyframes slideOutPrev {
+  0% {
+    left: 0
+  }
+  100% {
+    left: 100%
+  }
+}
+
+@keyframes slideOutNext {
+  0% {
+    left: 0
+  }
+  100% {
+    left: -100%
+  }
+}
+
+@keyframes slideInPrev {
+  0% {
+    left: -100%
+  }
+  100% {
+    left: 0
+  }
+}
+
+@keyframes slideInNext {
+  0% {
+    left: 100%
+  }
+  100% {
+    left: 0
+  }
+}
+
+.carousel.fade .item {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0
+}
+
+.carousel.fade .item.active {
+  opacity: 1
+}
+
+.carousel.fade .item.outNext, .carousel.fade .item.outPrev {
+  -webkit-animation: 1s ease-in-out 0s normal forwards 1 fadeOut;
+  animation: 1s ease-in-out 0s normal forwards 1 fadeOut
+}
+
+.carousel.fade .item.inNext, .carousel.fade .item.inPrev {
+  -webkit-animation: 1s ease-in-out 0s normal forwards 1 fadeIn;
+  animation: 1s ease-in-out 0s normal forwards 1 fadeIn
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1
+  }
+  to {
+    opacity: 0
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: .3
+  }
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1
+  }
+  100% {
+    opacity: 0
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
+}
+
+.slick-slider {
+  position: relative;
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent
+}
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0
+}
+
+.slick-list:focus {
+  outline: 0
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand
+}
+
+.slick-slider .slick-list, .slick-slider .slick-track {
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0)
+}
+
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block
+}
+
+.slick-track:after, .slick-track:before {
+  display: table;
+  content: ''
+}
+
+.slick-track:after {
+  clear: both
+}
+
+.slick-loading .slick-track {
+  visibility: hidden
+}
+
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px
+}
+
+[dir=rtl] .slick-slide {
+  float: right
+}
+
+.slick-slide img {
+  display: block
+}
+
+.slick-slide.slick-loading img {
+  display: none
+}
+
+.slick-slide.dragging img {
+  pointer-events: none
+}
+
+.slick-initialized .slick-slide {
+  display: block
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden
+}
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent
+}
+
+.slick-arrow.slick-hidden {
+  display: none
+}
+
+#main {
+  padding-top: 1px;
+  background-color: #fdfdfe;
+  background-repeat: no-repeat;
+  background-position: top center;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
+  -webkit-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out
+}
+
+#main .btn {
+  width: 98px;
+  line-height: 38px;
+  font-size: 16px;
+  padding: 0 5px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px
+}
+
+#main .btn .iconfont {
+  font-size: 16px
+}
+
+#main .btn-default {
+  border-color: #dedede
+}
+
+#main .btn-default:hover {
+  color: #46525e
+}
+
+#main .highlight {
+  color: #f60
+}
+
+#main .u-tag-lima {
+  color: #fff;
+  background-color: #e5a33b
+}
+
+#main .u-tag {
+  -webkit-border-radius: 2px;
+  border-radius: 2px
+}
+
+#main .g-ctn {
+  background-color: transparent
+}
+
+#main .rel {
+  position: relative
+}
+
+#main .box .box-title {
+  padding-top: 18px;
+  line-height: 52px;
+  font-size: 22px;
+  color: #333;
+  position: relative
+}
+
+#main .box .box-title a {
+  color: #666;
+  font-size: 14px;
+  position: absolute;
+  right: 0;
+  bottom: 0
+}
+
+#main .box .box-title a:hover {
+  color: #4567cc
+}
+
+#main .box .box-content {
+  width: 100%
+}
+
+#main .slot-top {
+  margin-top: 10px
+}
+
+#main .m-chief {
+  position: relative;
+  font-size: 30px;
+  height: 320px;
+  color: #FFF;
+  overflow: hidden
+}
+
+#main .m-chief .swiper-container {
+  width: 880px;
+  height: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  z-index: 1
+}
+
+#main .m-chief .swiper-slide {
+  float: left
+}
+
+#main .m-chief .swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box
+}
+
+#main .m-chief .swiper-wrapper .item-ctn {
+  width: 880px;
+  height: 320px;
+  display: block
+}
+
+#main .m-chief .swiper-indicators {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 3;
+  font-size: 0;
+  text-align: center;
+  display: inline-block
+}
+
+#main .m-chief .swiper-indicators:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: #000;
+  opacity: .5;
+  z-index: -1
+}
+
+#main .m-chief .swiper-indicators li {
+  width: 176px;
+  height: 36px;
+  padding: 0 18px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, .4);
+  line-height: 36px;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-right: 0;
+  position: relative;
+  background-color: transparent;
+  opacity: .75;
+  display: inline-block;
+  cursor: pointer
+}
+
+#main .m-chief .swiper-indicators li.active {
+  color: #fff;
+  background-color: rgba(0, 0, 0, .6)
+}
+
+#main .m-chief .swiper-indicators li::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  top: 11px;
+  height: 14px;
+  width: 1px;
+  background-color: rgba(255, 255, 255, .3);
+  display: inline-block
+}
+
+#main .m-chief .swiper-indicators li:last-child::after {
+  width: 0
+}
+
+#main .banner-card {
+  background: #fff url(//www.lmlc.com/cdn/desktop/index/img/banner-right_bg1.144ad8d190.jpg) no-repeat;
+  height: 320px;
+  padding: 192px 0 38px;
+  text-align: center
+}
+
+#main .banner-card .btn {
+  width: 220px;
+  margin-bottom: 12px
+}
+
+#main .banner-card .login-text {
+  background-color: transparent;
+  color: #666;
+  border: 1px solid #d8d8d9
+}
+
+#main .banner-card .a-link {
+  display: block;
+  color: #8f8f8f
+}
+
+#main .banner-card .a-link:hover {
+  color: #4567cc
+}
+
+#main .banner-card2 {
+  background: #fff url(//www.lmlc.com/cdn/desktop/index/img/banner-right_bg2.60bf21e1a3.jpg) no-repeat;
+  padding-top: 232px
+}
+
+#main .banner-card2 .btn {
+  margin-bottom: 10px
+}
+
+#main .credit-wrap {
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 12px #eee;
+  box-shadow: 0 0 12px #eee
+}
+
+#main .credit-wrap:hover {
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+  -webkit-box-shadow: 0 0 24px #e5e5e5;
+  box-shadow: 0 0 24px #e5e5e5
+}
+
+#main .credit-wrap .item {
+  float: left;
+  width: 257px;
+  padding: 30px 0 30px 136px;
+  font-size: 14px;
+  color: #999;
+  position: relative
+}
+
+#main .credit-wrap .item i {
+  display: inline-block;
+  position: absolute;
+  left: 40px;
+  top: 17px;
+  width: 82px;
+  height: 82px;
+  background: url(//www.lmlc.com/cdn/desktop/index/img/index-icons.f5a1c7e30a.png) no-repeat;
+  background-position: 0 -83px
+}
+
+#main .credit-wrap .item h2 {
+  line-height: 32px;
+  height: 32px;
+  font-size: 18px;
+  color: #333
+}
+
+#main .credit-wrap .item p {
+  line-height: 24px;
+  height: 24px
+}
+
+#main .credit-wrap .first i {
+  background-position: 0 0
+}
+
+#main .credit-wrap .last {
+  padding-left: 100px;
+  width: 280px
+}
+
+#main .credit-wrap .last i {
+  background-position: 0 -166px;
+  left: 6px
+}
+
+#main .credit-wrap .last::after {
+  width: 0
+}
+
+#main .newer-wrap {
+  height: 200px;
+  background: #e7391f url(//www.lmlc.com/cdn/desktop/index/img/newer_bg.c8b60b8acf.jpg) left top no-repeat
+}
+
+#main .newer-wrap .btn {
+  font-size: 14px
+}
+
+#main .newer-wrap .newer-step {
+  height: 170px;
+  padding: 30px 0 0 27px
+}
+
+#main .newer-wrap .newer-step .btn {
+  width: 80px;
+  line-height: 32px
+}
+
+#main .newer-wrap .newer-step .step {
+  width: 126px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 25px;
+  margin-right: 80px;
+  color: #fff;
+  float: left;
+  position: relative
+}
+
+#main .newer-wrap .newer-step .step:after {
+  content: '';
+  height: 2px;
+  width: 147px;
+  position: absolute;
+  top: 18px;
+  right: -115px;
+  background-color: #ef9788
+}
+
+#main .newer-wrap .newer-step .step .step-icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  line-height: 32px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  font-size: 20px
+}
+
+#main .newer-wrap .newer-step .step .desc {
+  margin-top: 5px
+}
+
+#main .newer-wrap .newer-step .step .info {
+  margin-bottom: 12px;
+  font-weight: 700
+}
+
+#main .newer-wrap .newer-step .step .info em {
+  color: #fedb01
+}
+
+#main .newer-wrap .newer-step .last {
+  margin-right: 0
+}
+
+#main .newer-wrap .newer-step .last:after {
+  width: 0
+}
+
+#main .newer-wrap .newer-step .step-checked:after {
+  background-color: #e85f21
+}
+
+#main .newer-wrap .newer-step .step-checked .btn {
+  cursor: default
+}
+
+#main .newer-wrap .newer-step .step-checked .step-icon {
+  border-color: #fedb01;
+  color: #fedb01
+}
+
+#main .newer-wrap .newer-step .step-checked .btn-primary {
+  color: #fac006;
+  background-color: transparent;
+  border-color: transparent;
+  position: relative
+}
+
+#main .newer-wrap .newer-step .step-checked .btn-primary:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #ffedb3;
+  opacity: .2
+}
+
+#main .newer-wrap .newer-step .step-current .step-icon {
+  border: 3px solid #eb745f;
+  background-color: #fff;
+  color: #d72c24
+}
+
+#main .newer-wrap .newer-step .step-current .desc {
+  margin-top: 3px
+}
+
+#main .newer-wrap .newer-promotion {
+  margin: 20px 21px 0 0;
+  width: 540px;
+  height: 160px;
+  background: url(//www.lmlc.com/cdn/desktop/index/img/newer_bg2.f7bdb277c1.png) no-repeat
+}
+
+#main .newer-wrap .newer-promotion .newer-promotion-wrap h2 {
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  height: 30px
+}
+
+#main .newer-wrap .newer-promotion .newer-promotion-wrap .is-newer-tips {
+  height: 18px;
+  line-height: 18px;
+  color: #999;
+  text-align: center;
+  margin-top: 6px
+}
+
+#main .newer-wrap .newer-promotion .btn {
+  width: 130px;
+  font-size: 16px
+}
+
+#main .newer-wrap .newer-promotion .content-wrapper {
+  width: 500px;
+  padding-left: 24px
+}
+
+#main .newer-wrap .newer-promotion .f-fl {
+  color: #999;
+  font-size: 14px;
+  text-align: center
+}
+
+#main .newer-wrap .newer-promotion .f-fl.rate {
+  width: 153px
+}
+
+#main .newer-wrap .newer-promotion .f-fl.rate .info {
+  line-height: 44px;
+  font-size: 28px;
+  height: 50px
+}
+
+#main .newer-wrap .newer-promotion .f-fl.rate .info span {
+  font-size: 46px
+}
+
+#main .newer-wrap .newer-promotion .f-fl.days {
+  width: 185px;
+  padding-top: 10px
+}
+
+#main .newer-wrap .newer-promotion .f-fl.days .info {
+  line-height: 34px;
+  font-size: 18px;
+  color: #666;
+  height: 38px
+}
+
+#main .newer-wrap .newer-promotion .f-fl.days .info em {
+  font-size: 28px
+}
+
+#main .newer-wrap .newer-promotion .f-fl.purchase {
+  width: 162px;
+  padding-top: 20px
+}
+
+#main .pro-desc {
+  width: 160px;
+  padding: 0 30px;
+  font-size: 16px;
+  background: url(//www.lmlc.com/cdn/desktop/index/img/blue_bg.85f89ed536.jpg) left top no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  position: relative
+}
+
+#main .pro-desc.long-desc {
+  background: url(//www.lmlc.com/cdn/desktop/index/img/red_bg.573f5c0055.jpg) left top no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%
+}
+
+#main .pro-desc.bank-desc {
+  background: url(//www.lmlc.com/cdn/desktop/index/img/purple_bg.7e5dedba63.jpg) left top no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%
+}
+
+#main .pro-desc p {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 160px;
+  color: #fff;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  line-height: 60px
+}
+
+#main .pro-desc a {
+  display: block;
+  font-size: 14px;
+  border: 1px solid #fff;
+  color: #fff;
+  line-height: 38px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px
+}
+
+#main .product-wrap {
+  width: 960px;
+  -webkit-box-shadow: 0 0 12px #d9d9d9;
+  box-shadow: 0 0 12px #d9d9d9
+}
+
+#main .product-wrap dl {
+  height: 69px;
+  font-size: 14px;
+  color: #333;
+  padding: 18px 0 22px;
+  border-bottom: 1px solid #eee
+}
+
+#main .product-wrap dl .btn-default {
+  border-color: #fff;
+  background: 0 0;
+  color: #46525e
+}
+
+#main .product-wrap dl:hover {
+  -webkit-box-shadow: 0 0 24px #e5e5e5;
+  box-shadow: 0 0 24px #e5e5e5;
+  -webkit-transition: .2s;
+  transition: .2s
+}
+
+#main .product-wrap dl:hover .btn {
+  background-color: #FECF2F;
+  color: #7c5d48
+}
+
+#main .product-wrap dl:hover .btn-default {
+  border-color: #dedede;
+  background: #dedede
+}
+
+#main .product-wrap dl dd {
+  padding-right: 20px
+}
+
+#main .product-wrap dl .tit {
+  font-size: 18px;
+  color: #333;
+  line-height: 38px
+}
+
+#main .product-wrap dl .title {
+  font-size: 14px
+}
+
+#main .product-wrap dl .small-tit {
+  font-size: 16px
+}
+
+#main .product-wrap dl .highlight {
+  color: #f60;
+  font-size: 24px
+}
+
+#main .product-wrap dl .desc {
+  font-size: 12px;
+  color: #999;
+  line-height: 30px
+}
+
+#main .product-wrap dl .name {
+  width: 240px;
+  padding-left: 40px
+}
+
+#main .product-wrap dl .rate {
+  width: 130px;
+  padding-right: 0
+}
+
+#main .product-wrap dl .day {
+  width: 130px;
+  text-align: center
+}
+
+#main .product-wrap dl .day .note {
+  line-height: 60px
+}
+
+#main .product-wrap dl .limit {
+  width: 80px;
+  text-align: center
+}
+
+#main .product-wrap dl .process {
+  width: 100px;
+  padding: 0;
+  text-align: center
+}
+
+#main .product-wrap dl .process .small-tit {
+  font-size: 16px
+}
+
+#main .product-wrap dl .process p {
+  font-size: 16px
+}
+
+#main .product-wrap dl .process .progress-wrap {
+  position: relative
+}
+
+#main .product-wrap dl .process .progress-wrap .tit {
+  height: 38px;
+  line-height: 30px
+}
+
+#main .product-wrap dl .process .process-bar {
+  position: absolute;
+  top: 32px;
+  left: 18px;
+  width: 64px;
+  height: 5px;
+  overflow: hidden;
+  background: #e8e7e0;
+  line-height: 0;
+  font-size: 0;
+  text-align: left
+}
+
+#main .product-wrap dl .process .process-bar img {
+  height: 5px
+}
+
+#main .product-wrap dl .oper {
+  padding-right: 25px;
+  padding-top: 17px;
+  width: 150px;
+  text-align: center;
+  position: relative
+}
+
+#main .product-wrap dl .oper .timer {
+  color: #f60;
+  font-size: 12px;
+  text-align: center;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 150px;
+  margin-top: -8px
+}
+
+#main .product-wrap dl .oper .timer i {
+  color: #fff;
+  background: #f60;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding: 1px 2px;
+  margin: 0 2px
+}
+
+#main .product-time .iconfont {
+  margin-right: 2px
+}
+
+#main .m-prompt {
+  color: #ff7200;
+  background-color: #fff0d8;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative
+}
+
+#main .m-prompt a {
+  color: #ff7200
+}
+
+#main .m-prompt .icon {
+  position: absolute;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  right: 0;
+  top: 0;
+  cursor: pointer
+}
+
+#main .m-series {
+  width: 912px;
+  margin-left: -20px
+}
+
+#main .m-series .serieitem {
+  float: left;
+  display: block;
+  width: 280px;
+  height: 320px;
+  background: #FFF;
+  font-size: 14px;
+  position: relative;
+  overflow: hidden;
+  color: #666;
+  -webkit-transition: -webkit-box-shadow ease-in-out .3s;
+  transition: box-shadow ease-in-out .3s;
+  margin-left: 20px;
+  -webkit-box-shadow: 0 0 12px #d9d9d9;
+  box-shadow: 0 0 12px #d9d9d9
+}
+
+#main .m-series .serieitem.serie_0 {
+  background: url(//www.lmlc.com/cdn/desktop/index/img/recommend0.53f4282a6e.png) no-repeat
+}
+
+#main .m-series .serieitem.serie_1 {
+  background: url(//www.lmlc.com/cdn/desktop/index/img/recommend1.baf8b1946c.png) no-repeat
+}
+
+#main .m-series .serieitem.serie_2 {
+  background: url(//www.lmlc.com/cdn/desktop/index/img/recommend2.773df70153.png) no-repeat
+}
+
+#main .m-series .serieitem .btn-default {
+  color: #46525e
+}
+
+#main .m-series .serieitem .ctn {
+  height: 100%;
+  text-align: center;
+  display: block
+}
+
+#main .m-series .serieitem .ctn h3 {
+  font-size: 1.286em;
+  line-height: 2.286em;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  padding-top: 24px;
+  color: #333
+}
+
+#main .m-series .serieitem .ctn h3 span {
+  position: relative;
+  display: inline-block;
+  max-width: 208px
+}
+
+#main .m-series .serieitem .ctn h3 span:after, #main .m-series .serieitem .ctn h3 span:before {
+  content: "";
+  position: absolute;
+  top: 49%;
+  width: 36px;
+  height: 3px;
+  background-color: #f60;
+  background: url(//www.lmlc.com/cdn/desktop/index/img/index-icons.f5a1c7e30a.png) no-repeat
+}
+
+#main .m-series .serieitem .ctn h3 span:before {
+  left: -46px;
+  background-position: 0 -250px
+}
+
+#main .m-series .serieitem .ctn h3 span:after {
+  right: -46px;
+  background-position: -40px -250px
+}
+
+#main .m-series .serieitem .ctn p {
+  line-height: 24px;
+  padding-bottom: 6px
+}
+
+#main .m-series .serieitem .ctn .pro-info {
+  padding-top: 26px
+}
+
+#main .m-series .serieitem .ctn .pro-info .tit {
+  line-height: 1;
+  height: 48px;
+  font-size: 18px
+}
+
+#main .m-series .serieitem .ctn .pro-info .tit em {
+  font-family: Arial;
+  font-size: 52px
+}
+
+#main .m-series .serieitem .ctn .pro-info .tit span {
+  font-size: 28px
+}
+
+#main .m-series .serieitem .ctn .pro-info .dec {
+  color: #999;
+  line-height: 32px
+}
+
+#main .m-series .serieitem .ctn .rate {
+  color: #f60
+}
+
+#main .m-series .serieitem .ctn .m-btnBar {
+  padding-top: 37px
+}
+
+#main .m-series .serieitem .buy {
+  width: 200px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent
+}
+
+#main .m-series .serieitem .buy:after {
+  content: '';
+  position: absolute;
+  background-color: #FECF2F;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  z-index: -1
+}
+
+#main .m-series .serieitem .btn-default:after {
+  background-color: #dedede
+}
+
+#main .m-series .serieitem:hover {
+  -webkit-box-shadow: 0 0 24px #d1d1d1;
+  box-shadow: 0 0 24px #d1d1d1;
+  z-index: 100
+}
+
+#main .m-series .serieitem:hover .buy {
+  color: #7c5d48
+}
+
+#main .m-series .serieitem:hover .buy:after {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0
+}
+
+#main .m-series .serieitem .loading {
+  line-height: 258px;
+  color: #aaa;
+  text-align: center;
+  display: block;
+  font-size: 16px
+}
+
+#main .m-series .product-time {
+  margin-right: 8px
+}
+
+#main .m-main {
+  background: 0 0
+}
+
+#main .m-main .g-mn {
+  width: 822px;
+  float: left;
+  padding-bottom: 2px
+}
+
+#main .m-main .g-sd {
+  width: 340px;
+  float: right
+}
+
+#main .m-rob {
+  position: relative;
+  height: 320px;
+  -webkit-box-shadow: 0 0 12px #d9d9d9;
+  box-shadow: 0 0 12px #d9d9d9;
+  overflow: hidden
+}
+
+#main .m-rob .screen {
+  position: relative;
+  height: 260px;
+  width: 100%;
+  overflow: hidden;
+  padding-left: 30px;
+  margin-top: 20px
+}
+
+#main .m-rob .screen dl {
+  position: relative
+}
+
+#main .m-rob .screen dd {
+  position: relative;
+  padding: 11px 0;
+  padding-left: 75px;
+  height: 52px
+}
+
+#main .m-rob .screen dd h4 {
+  color: #333;
+  font-size: 14px;
+  line-height: 22px
+}
+
+#main .m-rob .screen dd .pur {
+  font-size: 12px;
+  line-height: 14px
+}
+
+#main .m-rob .screen dd .pur a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 150px;
+  display: inline-block;
+  color: #999
+}
+
+#main .m-rob .screen dd .pur a:hover {
+  color: #4567cc
+}
+
+#main .m-rob .screen dd.active .buy-time {
+  color: #fff;
+  background-color: #4990e2;
+  border: 3px solid #e2edfa;
+  -webkit-border-radius: 13px;
+  border-radius: 13px
+}
+
+#main .m-rob .screen .time-wrap {
+  position: absolute;
+  top: 16px;
+  left: 0
+}
+
+#main .m-rob .screen .time-wrap .last {
+  padding-bottom: 10px
+}
+
+#main .m-rob .screen .buy-time {
+  display: inline-block;
+  border: 1px solid #e3e3e3;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #fdfdfe;
+  color: #999;
+  width: 64px;
+  line-height: 20px;
+  text-align: center;
+  overflow: hidden
+}
+
+#main .m-rob .screen .line {
+  position: absolute;
+  height: 70%;
+  width: 2px;
+  background: #E5EBF0;
+  left: 60px;
+  top: 42px
+}
+
+#main .company .box {
+  width: 380px
+}
+
+#main .company .box-content {
+  padding: 20px 20px 0;
+  width: auto;
+  -webkit-box-shadow: 0 0 12px #d9d9d9;
+  box-shadow: 0 0 12px #d9d9d9;
+  height: 300px
+}
+
+#main .company .box2 {
+  margin-right: 20px
+}
+
+#main .company .m-honor .slider {
+  height: 300px;
+  overflow: hidden;
+  position: relative
+}
+
+#main .company .m-honor .slider .slider-control {
+  position: absolute;
+  width: 26px;
+  height: 30px;
+  background-color: rgba(102, 102, 102, .6);
+  color: #fff;
+  top: 55px;
+  font-size: 16px;
+  line-height: 30px;
+  margin-top: 0;
+  text-align: center;
+  cursor: pointer
+}
+
+#main .company .m-honor .slider .slider-control:hover {
+  background-color: rgba(51, 51, 51, .6)
+}
+
+#main .company .m-honor .slider .slider-control.disabled {
+  color: #eee;
+  color: rgba(238, 238, 238, .3);
+  background-color: #eee;
+  background-color: rgba(238, 238, 238, .3)
+}
+
+#main .company .m-honor .slider .prev {
+  left: 1px
+}
+
+#main .company .m-honor .slider .next {
+  right: 1px
+}
+
+#main .company .m-honor .slider-inner {
+  position: relative;
+  height: 100%
+}
+
+#main .company .m-honor .honor-item {
+  float: left;
+  width: 340px;
+  font-size: 14px;
+  height: 100%
+}
+
+#main .company .m-honor .honor-item a {
+  display: block
+}
+
+#main .company .m-honor .honor-item img {
+  width: 338px;
+  height: 138px;
+  border: 1px solid #f5f5f5
+}
+
+#main .company .m-honor .honor-item h3 {
+  padding-top: 14px;
+  line-height: 38px;
+  font-size: 16px;
+  color: #333
+}
+
+#main .company .m-honor .honor-item p {
+  line-height: 24px;
+  color: #999;
+  max-height: 72px;
+  overflow: hidden
+}
+
+#main .company .m-honor .honor-item .hover-wrap:hover h3, #main .company .m-honor .honor-item .hover-wrap:hover p {
+  color: #4567cc
+}
+
+#main .company .news-item {
+  display: block;
+  padding-bottom: 10px;
+  padding-top: 12px;
+  border-bottom: 1px solid #eee;
+  line-height: 20px;
+  font-size: 14px;
+  color: #333;
+  position: relative
+}
+
+#main .company .news-item.first {
+  padding-top: 0
+}
+
+#main .company .news-item.last {
+  border-bottom: 0 none
+}
+
+#main .company .news-item > a {
+  display: block
+}
+
+#main .company .news-item img {
+  float: left;
+  margin-right: 10px;
+  width: 118px;
+  height: 76px;
+  border: 1px solid #f5f5f5
+}
+
+#main .company .news-item .new-info {
+  display: inline-block;
+  width: 200px
+}
+
+#main .company .news-item .new-info h3 {
+  height: 40px;
+  overflow: hidden
+}
+
+#main .company .news-item .time {
+  color: #999;
+  position: absolute;
+  bottom: 12px;
+  right: 0;
+  font-size: 12px
+}
+
+#main .company .m-help-wrap {
+  background: url(//www.lmlc.com/cdn/desktop/index/img/recommend0.53f4282a6e.png) no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%
+}
+
+#main .company .m-help .icon-point {
+  position: absolute;
+  top: 17px;
+  left: 0;
+  background-color: #4567cc;
+  width: 3px;
+  height: 3px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%
+}
+
+#main .company .m-help a {
+  display: block;
+  font-size: 14px;
+  line-height: 34px;
+  position: relative;
+  text-indent: 15px
+}
+
+#main .m-shareholder a {
+  display: block
+}
+
+#main .m-shareholder dl {
+  padding-left: 20px;
+  -webkit-box-shadow: 0 0 12px #d9d9d9;
+  box-shadow: 0 0 12px #d9d9d9
+}
+
+#main .m-shareholder dl:hover {
+  -webkit-box-shadow: 0 0 24px #d1d1d1;
+  box-shadow: 0 0 24px #d1d1d1
+}
+
+#main .m-shareholder dd {
+  width: 380px;
+  height: 95px;
+  float: left;
+  text-align: center;
+  line-height: 70px;
+  padding-top: 15px;
+  position: relative
+}
+
+#main .m-shareholder dd.first {
+  margin-left: 0
+}
+
+#main .m-shareholder dd.first:after {
+  width: 0
+}
+
+#main .m-shareholder dd i {
+  display: inline-block;
+  vertical-align: middle;
+  *margin-top: 18px;
+  font-size: 0;
+  line-height: 0;
+  background: url(//www.lmlc.com/cdn/desktop/index/img/shareholder.0ff0b10917.png) no-repeat
+}
+
+#main .m-shareholder dd:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 42px;
+  width: 1px;
+  height: 26px;
+  background-color: #eee
+}
+
+#main .m-shareholder .wangyi {
+  background-position: 0 -60px;
+  width: 160px;
+  height: 45px;
+  *margin-top: 10px
+}
+
+#main .m-shareholder .guangda {
+  background-position: 0 0;
+  width: 170px;
+  height: 43px
+}
+
+#main .m-shareholder .haihang {
+  background-position: 0 -120px;
+  width: 200px;
+  height: 30px
+}
+
+#main .m-partner {
+  background: 0 0;
+  padding-bottom: 85px
+}
+
+#main .m-partner .partner-outer {
+  padding: 0 53px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 22px
+}
+
+#main .m-partner .partner-ctrl {
+  position: absolute;
+  width: 1170px;
+  height: 100%;
+  top: 0;
+  left: 5px
+}
+
+#main .m-partner .partner-ctrl .icon {
+  display: none;
+  position: absolute;
+  width: 25px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  top: 50%;
+  margin-top: -20px;
+  cursor: pointer;
+  color: #333;
+  z-index: 1;
+  background: #FFF;
+  -webkit-box-shadow: 0 -1px 10px #eee, 1px 0 10px #eee, 0 1px 10px #eee, -1px 0 10px #eee;
+  box-shadow: 0 -1px 10px #eee, 1px 0 10px #eee, 0 1px 10px #eee, -1px 0 10px #eee
+}
+
+#main .m-partner .partner-ctrl .icon:hover {
+  -webkit-box-shadow: 0 0 24px #d1d1d1;
+  box-shadow: 0 0 24px #d1d1d1
+}
+
+#main .m-partner .partner-ctrl .icon-left {
+  right: 0
+}
+
+#main .m-partner .partner-ctrl .icon-right {
+  left: 0
+}
+
+#main .m-partner .partner-ctrl .disabled {
+  background-color: #eee;
+  -webkit-box-shadow: 0 0 0 #eee;
+  box-shadow: 0 0 0 #eee;
+  color: #fff;
+  cursor: auto
+}
+
+#main .m-partner .partner-ctrl .disabled:hover {
+  -webkit-box-shadow: none;
+  box-shadow: none
+}
+
+#main .m-partner .partner {
+  overflow: hidden;
+  position: relative
+}
+
+#main .m-partner .partner dl {
+  width: 1060px;
+  position: relative
+}
+
+#main .m-partner dd {
+  width: 191px;
+  height: 54px;
+  float: left;
+  text-align: center;
+  line-height: 60px;
+  margin-right: 20px;
+  margin-bottom: 18px
+}
+
+#main .m-partner dd i {
+  display: inline-block;
+  vertical-align: middle;
+  *margin-top: 18px;
+  font-size: 0;
+  line-height: 0;
+  background: url(//www.lmlc.com/cdn/desktop/index/img/partner.24322ba6ee.png) no-repeat
+}
+
+#main .m-partner dd span {
+  display: block;
+  width: 100%;
+  height: 100%
+}
+
+#main .m-partner dd span i {
+  width: 191px;
+  height: 54px
+}
+
+#main .m-partner .partner1 {
+  background-position: 0 0
+}
+
+#main .m-partner .partner2 {
+  background-position: 0 -54px
+}
+
+#main .m-partner .partner3 {
+  background-position: 0 -108px
+}
+
+#main .m-partner .partner4 {
+  background-position: 0 -162px
+}
+
+#main .m-partner .partner5 {
+  background-position: 0 -216px
+}
+
+#main .m-partner .partner6 {
+  background-position: 0 -270px
+}
+
+#main .m-partner .partner7 {
+  background-position: 0 -324px
+}
+
+#main .m-partner .partner8 {
+  background-position: 0 -378px
+}
+
+#main .m-partner .partner9 {
+  background-position: 0 -432px
+}
+
+#main .m-partner .partner10 {
+  background-position: 0 -486px
+}
+
+#main .u-tag-feature {
+  -webkit-border-radius: 3px;
+  border-radius: 3px
+}
+
+#main .is-for-newer {
+  border-color: #f60;
+  color: #f60
+}
+
+.advertDialogLayout {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+
+.advertDialog {
+  z-index: 10001;
+  width: auto;
+  left: 50%;
+  top: 50%;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 1s, margin-top 1s, margin-left 1s;
+  transition: transform 1s, margin-top 1s, margin-left 1s
+}
+
+.advertDialogclose {
+  -webkit-transform: scaleX(0) scaleY(0) rotate(0);
+  -ms-transform: scaleX(0) scaleY(0) rotate(0);
+  transform: scaleX(0) scaleY(0) rotate(0)
+}
+
+.advertDialogShow {
+  -webkit-transform: scaleX(1) scaleY(1) rotate(720deg);
+  -ms-transform: scaleX(1) scaleY(1) rotate(720deg);
+  transform: scaleX(1) scaleY(1) rotate(720deg)
+}
