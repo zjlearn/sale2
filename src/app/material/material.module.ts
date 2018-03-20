@@ -6,6 +6,7 @@ import {
   MatListModule, MatProgressBarModule, MatPaginatorModule, MatProgressSpinnerModule, MatCheckboxModule, MatSortModule, MatTableModule,
   MatTabsModule, MatButtonToggleModule, MatNativeDateModule
 } from '@angular/material';
+import {MatDividerModule} from '@angular/material/divider';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatDatepickerModule} from '@angular/material/datepicker';
@@ -37,7 +38,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatButtonToggleModule,
     BrowserAnimationsModule,
     MatNativeDateModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatDividerModule
   ],
   exports: [
     MatButtonModule,
@@ -62,7 +64,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatButtonToggleModule,
     BrowserAnimationsModule,
     MatNativeDateModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatDividerModule
   ],
   declarations: []
 })
