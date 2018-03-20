@@ -1,0 +1,36 @@
+<div class="container">
+  <h3>交易记录</h3>
+
+  <mat-tab-group>
+    <mat-tab label="全部">
+      <div class="container">
+        <div>
+          <button mat-button color="primary">近一周</button>
+          <button mat-button color="primary">近一月</button>
+          <button mat-button color="primary">全部</button>
+          <mat-form-field>
+            <input matInput [matDatepicker]="picker" placeholder="开始时间">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput [matDatepicker]="picker1" placeholder="结束时间">
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          <button mat-button color="primary">查询</button>
+        </div>
+
+      </div>
+
+    </mat-tab>
+    <mat-tab label="理财">
+      <h1>Some more tab content</h1>
+      <p>...</p>
+    </mat-tab>
+    <mat-tab label="余额">
+      <h1>Some more tab content</h1>
+      <p>...</p>
+    </mat-tab>
+  </mat-tab-group>
+</div>

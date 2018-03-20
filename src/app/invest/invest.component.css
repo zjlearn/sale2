@@ -1,3 +1,13 @@
 .product-select-card{
-  width: 60%;
+  width: 90%;
+  margin: 10px auto;
+}
+
+h3{
+  background-color: #8d8d8d;
+  text-align: center;
+}
+
+#filterSection{
+  margin: 10px auto;
 }

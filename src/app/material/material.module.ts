@@ -4,10 +4,13 @@ import {
   MatButtonModule, MatToolbarModule, MatIconModule,
   MatCardModule, MatSidenavModule, MatInputModule, MatTooltipModule, MatOptionModule, MatSelectModule, MatStepperModule,
   MatListModule, MatProgressBarModule, MatPaginatorModule, MatProgressSpinnerModule, MatCheckboxModule, MatSortModule, MatTableModule,
-  MatTabsModule, MatButtonToggleModule
+  MatTabsModule, MatButtonToggleModule, MatNativeDateModule
 } from '@angular/material';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+
+
 
 @NgModule({
   imports: [
@@ -32,7 +35,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatTableModule,
     MatTabsModule,
     MatButtonToggleModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatNativeDateModule,
+    MatDatepickerModule
   ],
   exports: [
     MatButtonModule,
@@ -55,7 +60,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatTableModule,
     MatTabsModule,
     MatButtonToggleModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatNativeDateModule,
+    MatDatepickerModule
   ],
   declarations: []
 })

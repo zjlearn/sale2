@@ -1,0 +1,45 @@
+.wdg-werenrendai-top-header {
+  height: 36px;
+  line-height: 36px;
+  background: #f6f6f6;
+  font-size: 12px;
+}
+
+.wdg-werenrendai-top-header .main-section {
+  height: 100%;
+  color: #333;
+}
+
+.main-section {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+.wdg-werenrendai-top-header .main-section .tel-phone {
+  float: left;
+  height: 100%;
+}
+
+.wdg-werenrendai-top-header .main-section .site-nav {
+  float: right;
+}
+
+/*特指 覆盖掉bootstrap中的属性配置*/
+.wdg-werenrendai-top-header ul{
+  margin-bottom: 0px;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+.wdg-werenrendai-top-header .main-section .site-nav .nav-item {
+  float: left;
+  height: 36px;
+  text-align: center;
+}
+
+.wdg-werenrendai-top-header .main-section .site-nav .padding-item {
+  padding-left: 40px;
+}
+

@@ -11,6 +11,13 @@ import {MyRootComponent} from './my-account/my-root/my-root.component';
 import {OverviewComponent} from './my-account/overview/overview.component';
 import {MyLoanComponent} from './my-account/my-loan/my-loan.component';
 import {MyInvestComponent} from './my-account/my-invest/my-invest.component';
+import {MyNavComponent} from './my-account/my-nav/my-nav.component';
+import {MessageComponent} from './my-account/message/message.component';
+import {RecordComponent} from './my-account/record/record.component';
+import {HelpComponent} from './help-center/help/help.component';
+import {LoginHelpComponent} from './help-center/login-help/login-help.component';
+import {PwHelpComponent} from './help-center/pw-help/pw-help.component';
+import {ReauthHelpComponent} from './help-center/reauth-help/reauth-help.component';
 
 
 // 组件之间的路由关系
@@ -28,6 +35,16 @@ export const routes: Routes = [
       {path: '', component: OverviewComponent},
       {path: 'myLoan', component: MyLoanComponent},
       {path: 'myInvest', component: MyInvestComponent},
+      {path: 'overView', component: OverviewComponent},
+      {path: 'message', component: MessageComponent},
+      {path: 'record', component: RecordComponent}
+    ]
+  }, {
+    path: 'help', component: HelpComponent, children: [
+      {path: '', component: LoginHelpComponent},
+      {path: 'loginHelp', component: LoginHelpComponent},
+      {path: 'pwHelp', component: PwHelpComponent},
+      {path: 'reauthHelp', component: ReauthHelpComponent},
     ]
   }
 ];

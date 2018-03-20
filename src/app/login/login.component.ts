@@ -10,35 +10,46 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  userForm: FormGroup;
+  loginForm: FormGroup;
 
   constructor(private http: HttpClient, private fb: FormBuilder) {
   }
 
   ngOnInit() {
-    this.userForm = this.fb.group({
-      name: ['', [Validators.required, Validators.minLength(2)]],
+    this.loginForm = this.fb.group({
+      mobile: ['', [Validators.required, Validators.minLength(2)]],
       password: ['', Validators.required],
       verifyCode: ['', Validators.required]
     });
   }
 
+  // form 表单的方式进行post提交
   login() {
     console.log('开始登录！！');
-    const formModel = this.userForm.value;
-    console.log(formModel.name);
-    console.log(formModel.password);
-    console.log(formModel.verifyCode);
-
-    this.http.post('http://localhost:4200/xhr/user/login', formModel).subscribe(data => {
+    const formModel = this.loginForm.value;
+    const formData: FormData = new FormData();
+    formData.append('mobile', formModel.mobile);
+    formData.append('password', formModel.password);
+    this.http.post('http://localhost:4200/xhr/user/login',  formData).subscribe(data => {
       // Read the result field from the JSON response.
       console.log(data);
     });
     console.log('登录成功！！');
   }
 
-  onSubmit() {
-    console.log('Form Submitted!');
+  // 以form表单的方式进行post提交
+  register() {
+    console.log('开始注册！！');
+    const formModel = this.loginForm.value;
+    const formData: FormData = new FormData();
+    formData.append('mobile', formModel.mobile);
+    formData.append('password', formModel.password);
+    formData.append('inviteCode', formModel.inviteCode);
+    this.http.post('http://localhost:4200/xhr/user/register',  formData).subscribe(data => {
+      // Read the result field from the JSON response.
+      console.log(data);
+    });
+    console.log('注册成功！！');
   }
 
   getVerifyCode() {

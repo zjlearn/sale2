@@ -1,0 +1,28 @@
+#footer{
+  min-width: 1180px;
+}
+
+#m-copyright {
+  background: #333;
+  color: #d0d0d0;
+  font-size: 12px;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+#m-copyright .g-ctn:nth-child(1) {
+  margin-top: 0;
+}
+#m-copyright .f14 {
+  font-size: 14px;
+}
+
+#m-copyright .g-ctn {
+  background-color: transparent;
+  margin-top: 24px;
+}
+.g-ctn {
+  display: block;
+  width: 1180px;
+  margin: 0 auto;
+  background: #FFF;
+}

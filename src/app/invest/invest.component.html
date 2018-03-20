@@ -1,12 +1,13 @@
-<!--项目选择按钮-->
-<mat-card class="product-select-card" xmlns="http://www.w3.org/1999/html">
-  <mat-card-header>
-    <mat-card-title>项目筛选</mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
+<div class="container product-select-card">
+  <h3>项目筛选</h3>
+  <div id ="filterSection">
 
-  </mat-card-content>
-  <mat-card-actions>
+    <!--<div class="btn-group" role="group" aria-label="Basic example">-->
+      <!--<button type="button" class="btn btn-secondary">Left</button>-->
+      <!--<button type="button" class="btn btn-secondary">Middle</button>-->
+      <!--<button type="button" class="btn btn-secondary">Middle</button>-->
+    <!--</div>-->
+
     <label>借款类型: </label>
     <button mat-button>不限</button>
     <button mat-button>房产抵押</button>
@@ -24,11 +25,12 @@
     <button mat-button>1个月以内</button>
     <button mat-button>1-3个月</button>
     <button mat-button>4-6个月</button>
-  </mat-card-actions>
-</mat-card>
-<app-list-products></app-list-products>
-<!--分页-->
-<mat-paginator  itemsPerPageLabel= "每页记录数" [length]="100"
-               [pageSize]="10"
-               [pageSizeOptions]="[5, 10, 25, 100]">
-</mat-paginator>
+  </div>
+
+
+  <app-list-products></app-list-products>
+  <!--分页-->
+  <mat-paginator  itemsPerPageLabel= "每页记录数" [length]="100"
+                  [pageSize]="10"
+                  [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</div>

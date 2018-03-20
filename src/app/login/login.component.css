@@ -1,6 +1,10 @@
 .box {
-  width: 600px;
-  margin: auto auto;
+  width: 350px;
+  background-color: #ffffff;
+  margin-top: 60px;
+  float: right;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }
 
 .login-container {
@@ -16,14 +20,15 @@
   display: block;
 }
 
-.button {
-  color: aqua;
-}
-
-#verifybutton{
-  float: right;
+.mainButton {
+  width: 300px;
+  margin: 10px auto;
 }
 
 #itemCheck{
   width: auto;
+}
+
+.m-agreements{
+  font-size: 10px;
 }
