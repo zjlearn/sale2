@@ -1,7 +1,9 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {ActivatedRoute, Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-login',
@@ -12,7 +14,10 @@ export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
 
-  constructor(private http: HttpClient, private fb: FormBuilder) {
+  @Output() userName: EventEmitter<string> = new EventEmitter<string>();
+
+
+  constructor(private http: HttpClient, private fb: FormBuilder, private router: Router) {
   }
 
   ngOnInit() {
@@ -35,6 +40,10 @@ export class LoginComponent implements OnInit {
       console.log(data);
     });
     console.log('登录成功！！');
+    // 发射登录成功的信息
+    this.userName.emit('张军');
+    // 登录完成之后，跳转到主页
+    this.router.navigate(['/home']);
   }
 
   // 以form表单的方式进行post提交
@@ -50,6 +59,10 @@ export class LoginComponent implements OnInit {
       console.log(data);
     });
     console.log('注册成功！！');
+    // 发射注册的成功的信息
+    this.userName.emit('张军');
+    // 注册完成之后 跳转到主页
+    this.router.navigate(['/home']);
   }
 
   getVerifyCode() {

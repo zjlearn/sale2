@@ -73,11 +73,11 @@
   color: #4567cc
 }
 
-#main .m-nav .navTitle.active {
+#main .m-nav .navTitle:active {
   color: #4567cc
 }
 
-#main .m-nav .navTitle.active i {
+#main .m-nav .navTitle:active i {
   color: #4567cc
 }
 
@@ -135,25 +135,25 @@
   font-size: 14px
 }
 
-#main .m-nav .ele-node .modl.active {
+#main .m-nav .ele-node .modl:active {
   background: #FFF;
   cursor: default
 }
 
-#main .m-nav .modl.active .up-arrow {
+#main .m-nav .modl:active .up-arrow {
   display: inline-block
 }
 
-#main .m-nav .modl.active .down-arrow {
+#main .m-nav .modl:active .down-arrow {
   display: none
 }
 
-#main .m-nav .modl.active + .ele-node {
-  display: block
+#main .m-nav .modl:active + .ele-node {
+  /*display: block*/
 }
 
 #main .m-nav .ele-node {
-  display: none
+  /*display: none*/
 }
 
 #main .m-nav .ele-node .modl em {
@@ -254,6 +254,28 @@
 mat-divider{
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.f-cb {
+  display: block;
+  zoom: 1
+}
+
+.f-cb:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden
+}
+
+.f-hide {
+  display: none
+}
+
+:focus {
+  outline: -webkit-focus-ring-color auto 5px;
 }
 
 
