@@ -15,7 +15,7 @@ import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import {AppRoutingModule} from './app-routing.module';
-import {ProductService} from './shared/productService';
+import {ProductService} from './shared/services/productService';
 import { ListProductsComponent } from './list-products/list-products.component';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -37,6 +37,8 @@ import { LoginHelpComponent } from './help-center/login-help/login-help.componen
 import { PwHelpComponent } from './help-center/pw-help/pw-help.component';
 import { ReauthHelpComponent } from './help-center/reauth-help/reauth-help.component';
 import { TempComponent } from './help-center/temp/temp.component';
+import {UserService} from './shared/services/user.service';
+import {AuthGuardService} from './shared/services/auth-guard.service';
 
 
 @NgModule({
@@ -80,7 +82,7 @@ import { TempComponent } from './help-center/temp/temp.component';
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [ProductService],
+  providers: [ProductService, UserService, AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

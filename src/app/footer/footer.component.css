@@ -1,5 +1,7 @@
 #footer{
   min-width: 1180px;
+  display: block;
+  min-height: 300px;
 }
 
 #m-copyright {
@@ -25,4 +27,16 @@
   width: 1180px;
   margin: 0 auto;
   background: #FFF;
+}
+
+.f-fr{
+  float: right;
+}
+
+.f-fl{
+  float: left;
+}
+
+.f-cb{
+  display: block;
 }

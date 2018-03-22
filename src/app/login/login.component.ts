@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
+import {UserService} from '../shared/services/user.service';
 
 
 @Component({
@@ -14,10 +15,8 @@ export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
 
-  @Output() userName: EventEmitter<string> = new EventEmitter<string>();
-
-
-  constructor(private http: HttpClient, private fb: FormBuilder, private router: Router) {
+  constructor(private http: HttpClient, private fb: FormBuilder, private router: Router,
+              private userService: UserService) {
   }
 
   ngOnInit() {
@@ -35,13 +34,13 @@ export class LoginComponent implements OnInit {
     const formData: FormData = new FormData();
     formData.append('mobile', formModel.mobile);
     formData.append('password', formModel.password);
-    this.http.post('http://localhost:4200/xhr/user/login',  formData).subscribe(data => {
+    this.http.post('http://localhost:4200/xhr/user/login', formData).subscribe(data => {
       // Read the result field from the JSON response.
       console.log(data);
     });
     console.log('登录成功！！');
     // 发射登录成功的信息
-    this.userName.emit('张军');
+    this.userService.isLogin = true;
     // 登录完成之后，跳转到主页
     this.router.navigate(['/home']);
   }
@@ -54,13 +53,13 @@ export class LoginComponent implements OnInit {
     formData.append('mobile', formModel.mobile);
     formData.append('password', formModel.password);
     formData.append('inviteCode', formModel.inviteCode);
-    this.http.post('http://localhost:4200/xhr/user/register',  formData).subscribe(data => {
+    this.http.post('http://localhost:4200/xhr/user/register', formData).subscribe(data => {
       // Read the result field from the JSON response.
       console.log(data);
     });
     console.log('注册成功！！');
     // 发射注册的成功的信息
-    this.userName.emit('张军');
+    this.userService.isLogin = true;
     // 注册完成之后 跳转到主页
     this.router.navigate(['/home']);
   }

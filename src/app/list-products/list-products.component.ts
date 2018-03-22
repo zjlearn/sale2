@@ -1,6 +1,6 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {ProductService} from '../shared/productService';
-import {Product} from '../shared/product';
+import {ProductService} from '../shared/services/productService';
+import {Product} from '../shared/models/product';
 import {MatSort, MatTableDataSource} from '@angular/material';
 
 @Component({
