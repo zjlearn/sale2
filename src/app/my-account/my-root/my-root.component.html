@@ -1,59 +1,106 @@
-<div class="wapper">
-  <div class="container" id="sidebarWapperContainer">
+<div id="main" class="f-cb clearfix">
 
-    <div [style.color]="normalFontColor">
-      <img src="" class="logo-img" alt="头像"/>
-      <span>张军</span>
-      <span>zj_learn@163.com</span>
-    </div>
-
-    <div id="personInfoWapper">
-      <dl class="d-flex justify-content-between align-items-center">
-        <dd class="">
-          <!--包裹icon的集合-->
-          <span class="icon-wrap">
-         <i class="material-icons ">faces</i>
-        </span>
-          <p class="note">身份待认证</p>
-        </dd>
-        <dd class="">
-          <a class="icon-wrap" href="/web/page/login/account/bindLmlcPhone.html">
-            <i class="material-icons">smartphone</i>
-          </a>
-          <div class="note"><a href="/web/page/login/account/bindLmlcPhone.html">马上绑定</a></div>
-        </dd>
-        <dd class="">
-          <a class="icon-wrap" href="/web/page/login/success/risk_assess.html">
-            <i class="material-icons">assignment</i>
-          </a>
-          <p class="note">已评估</p>
-        </dd>
-      </dl>
-    </div>
-    <mat-divider [style.background-color]="dividerBgColor"></mat-divider>
-
-    <div class="sidebar-wrapper">
-      <div class="nav-container">
-        <ul class="nav d-flex flex-column">
-          <li *ngFor="let menuItem of menuItems" routerLinkActive #rla="routerLinkActive"
-              [ngClass]="rla.isActive? (menuItem.children === null? 'active' : '') : ''"
-              [routerLinkActiveOptions]="{exact: true}">
-            <a [style.display]="menuItem.children === null? 'flex' : 'none'" [routerLink]="[menuItem.path]"
-               [style.background-color]="rla.isActive? color : 'transparent'"
-               [style.color]="rla.isActive? activeFontColor : normalFontColor">
-              <i class="material-icons">{{menuItem.icon}}</i>
-              <span>{{menuItem.title}}</span>
-            </a>
-          </li>
-        </ul>
+  <div id="guideBar">
+    <a href="javascript:;" class="item gotop J_goTop" data-tar="" style="height: 0px; display: none;"></a>
+    <a href="javascript:;" class="item service J_customerService"></a>
+    <div style="position: relative;" class="J_qrcode">
+      <a href="javascript:;" class="item app" title="APP下载">
+      </a>
+      <div class="qr-code-wrap">
+        <div class="qr-wrap-bg"></div>
+        <a class="qr-code-text" href="//pop.lmlc.com/web/client.html?from=guidebar" target="_blank"></a>
+        <div class="qr-code-bg"></div>
+        <a class="qr-img" href="//pop.lmlc.com/web/client.html?from=guidebar" target="_blank"></a>
+        <span class="J_close"></span>
       </div>
     </div>
   </div>
 
-  <div id = "main-panel" class="main-panel">
-    <!--对应的内容区域， 该内容区域显示导航相对应的-->
-    <router-outlet></router-outlet>
+  <!--主要的内容区域-->
+  <div class="g-ctn f-cb">
+    <div class="g-sd J_navList" style="height: 2917px">
+      <div class="m-user">
+        <div [style.color]="normalFontColor">
+          <img src="" class="logo-img" alt="头像"/>
+          <span>张军</span>
+          <span>zj_learn@163.com</span>
+        </div>
+
+        <div id="personInfoWapper">
+          <dl class="d-flex justify-content-between align-items-center">
+            <dd class="">
+              <!--包裹icon的集合-->
+              <span class="icon-wrap"><i class="material-icons ">faces</i></span>
+              <p class="note">身份待认证</p>
+            </dd>
+            <dd class="">
+              <a class="icon-wrap" href="/web/page/login/account/bindLmlcPhone.html">
+                <i class="material-icons">smartphone</i>
+              </a>
+              <div class="note"><a href="/web/page/login/account/bindLmlcPhone.html">马上绑定</a></div>
+            </dd>
+            <dd class="">
+              <a class="icon-wrap" href="/web/page/login/success/risk_assess.html">
+                <i class="material-icons">assignment</i>
+              </a>
+              <p class="note">已评估</p>
+            </dd>
+          </dl>
+        </div>
+      </div>
+
+
+      <mat-divider [style.background-color]="dividerBgColor"></mat-divider>
+
+      <nav class="m-nav J_nav">
+        <a class="f-cb active" href="/web/page/login/fund/overview.html">
+          <em><i class="iconfont"></i>资产总览</em>
+          <i class="iconfont arrow"></i>
+        </a>
+        <a class="f-cb " href="/web/page/asset.html">
+          <em><i class="iconfont"></i>我的理财</em>
+          <i class="iconfont arrow"></i>
+        </a>
+        <a class="f-cb treasury " href="/web/page/login/fund/jsFund.html">
+          <em><i class="iconfont"></i>立马金库</em>
+          <i class="iconfont arrow"></i>
+        </a>
+        <a class="f-cb " href="/web/page/login/trade_detail.html">
+          <em><i class="iconfont"></i>交易记录</em>
+          <i class="iconfont arrow"></i>
+        </a>
+        <a class="f-cb " href="/web/page/login/my_bank_card.html">
+          <em><i class="iconfont bank-icon"></i>我的银行卡</em>
+          <i class="iconfont arrow"></i>
+        </a>
+        <a class="f-cb " href="/web/page/coupon.html">
+          <em><i class="iconfont"></i>红包 福利券</em>
+          <i class="iconfont arrow"></i>
+        </a>
+        <a class="f-cb center-msg " href="/web/page/login/message/main.html">
+          <em><i class="iconfont"></i>消息中心</em>
+          <i class="iconfont arrow"></i>
+        </a>
+        <a class="f-cb account " href="/web/page/account.html">
+          <em><i class="iconfont"></i>账户设置</em>
+          <i class="iconfont arrow"></i>
+        </a>
+        <div class="qrcode">
+          <img src="//www.lmlccdn.com/www.lmlc.com.new/cdn/desktop/user/center/common/img/qrocde.f69af5a6fb.png"
+               height="120" width="120">
+          <p>扫一扫&nbsp;随时随地安心理财</p>
+        </div>
+      </nav>
+
+
+    </div>
+
+    <div id="main-panel" class="main-panel">
+      <!--对应的内容区域， 该内容区域显示导航相对应的-->
+      <router-outlet></router-outlet>
+    </div>
   </div>
+
 
 </div>
 

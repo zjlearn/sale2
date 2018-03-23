@@ -18,6 +18,11 @@
           <a target="_self" rel="nofollow" routerLink="login">登录</a>
         </div>
       </li>
+      <li *ngIf="this.userService.isLogin" class="user-item fn-clear" num="">
+        <div class="denglu">
+          <a target="_self" rel="nofollow" routerLink="/account">个人中心</a>
+        </div>
+      </li>
     </ul>
 
   </div>
