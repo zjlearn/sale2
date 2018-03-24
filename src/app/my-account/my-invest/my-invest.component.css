@@ -1,0 +1,48 @@
+.g-mn {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 940px;
+  padding: 15px 38px 0;
+  color: #333;
+  float: right;
+}
+
+.my-asset-nobalance {
+  border-bottom: 1px solid #e5ebf0;
+  text-align: center;
+}
+
+.tab-wrap {
+  border-bottom: 1px solid #4567cc;
+  height: 39px;
+  font-size: 16px;
+  margin-top: 20px;
+}
+.ui-paging {
+  position: relative;
+}
+
+.product-tips {
+  margin-top: 20px;
+}
+
+.alert-normal {
+  background-color: #e8f1fa;
+  border-color: #e8f1fa;
+  color: #666;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.alert {
+  position: relative;
+  font-size: 14px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid transparent;
+  text-align: center;
+}
+
+.f-hide {
+  display: none;
+}

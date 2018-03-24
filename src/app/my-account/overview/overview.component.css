@@ -10,3 +10,45 @@
 .restAsset{
   font-size: 32px ;
 }
+
+#main .m-detail .detail-wrap {
+  position: relative;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e5ebf0;
+  padding-top: 20px;
+}
+
+#main .m-detail #echarts {
+  width: 250px;
+  height: 250px;
+}
+
+#main .m-detail .echarts-tip {
+  color: #999;
+  font-size: 20px;
+  position: absolute;
+  left: 84px;
+  top: 132px;
+  text-align: center;
+}
+
+#main .m-detail .blankWrap {
+  width: 370px;
+  height: 152px;
+  background: #fff7e5 center bottom url(/cdn/desktop/user/center/assets/img/ripple2.jpg) no-repeat;
+  color: #e57a23;
+  text-align: center;
+  float: right;
+  margin-right: 38px;
+  padding: 68px 50px 0;
+  font-size: 18px;
+}
+
+.f-cb:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}

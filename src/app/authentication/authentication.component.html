@@ -16,7 +16,8 @@
 
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button color="primary" class="mainButton">开通银行存管</button>
+      <button mat-raised-button color="primary" class="mainButton" (click)="ipsForm.submit()">开通银行存管</button>
     </mat-card-actions>
   </mat-card>
+  <app-ips-form #ipsForm [request]="234" [sign]="ret" [operationType]="25" [merchantID]="register"></app-ips-form>
 </div>

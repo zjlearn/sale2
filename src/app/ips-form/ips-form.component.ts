@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, OnInit} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, Input, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {FormBuilder, FormGroup} from '@angular/forms';
 
@@ -9,9 +9,13 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 })
 export class IpsFormComponent implements OnInit, AfterViewInit {
 
+  @Input()
   sign: string;
+  @Input()
   request: string;
+  @Input()
   operationType: string;
+  @Input()
   merchantID: string;
 
   ipsForm: FormGroup;
@@ -44,6 +48,22 @@ export class IpsFormComponent implements OnInit, AfterViewInit {
 
 
   ngAfterViewInit(): void {
+    // setTimeout(100);
+    // const test = this.elRef.nativeElement.querySelector('#ipsForm');
+    // console.log(test);
+    // console.log('haha ipsForm');
+    // console.log(this.sign);
+    // console.log(this.request);
+    // console.log(this.merchantID);
+    // setTimeout(() => {
+    //   test.submit();
+    // }, 500);
+  }
+
+  /**
+   *该函数用于提交该表单
+   */
+  submit() {
     setTimeout(100);
     const test = this.elRef.nativeElement.querySelector('#ipsForm');
     console.log(test);
@@ -54,6 +74,5 @@ export class IpsFormComponent implements OnInit, AfterViewInit {
     setTimeout(() => {
       test.submit();
     }, 500);
-    // test.submit();
   }
 }

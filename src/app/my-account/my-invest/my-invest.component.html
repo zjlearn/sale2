@@ -1,25 +1,35 @@
-<!--个人资产的查看-->
-<div class="container">
-  <mat-card class="d-flex justify-content-between" id = "asset">
-    <div class="">
-      <h3>总资产</h3>
-      <span>8.90元</span>
-    </div>
-    <mat-divider [vertical]="true"></mat-divider>
-    <div>
-      <h3>昨日收益</h3>
-      <span>8.90元</span>
-    </div>
-    <mat-divider [vertical]="true"></mat-divider>
-    <div>
-      <h3>累计收益</h3>
-      <span>8.90元</span>
-    </div>
-  </mat-card>
+<div class="g-mn index">
+  <div class="my-asset my-asset-nobalance">
+    <h2 class="title"><i class="iconfont" id="J_eyeControl"></i>我的理财</h2>
+    <ul class="f-cb">
+      <li class="first">
+        <b class="wordSpacing0 J_eyeControl" data-amount="0.00">* *</b>
+        元<br><em>理财金额</em>
+      </li>
+      <li class="redfont">
+        <i class="wordSpacing1 J_eyeControl" data-amount="0.00">* *</i>
+        元<br><em>最新收益</em>
+      </li>
+      <li>
+        <i class="wordSpacing1 J_eyeControl" data-amount="82.27">* *</i>
+        元<br><em>累计收益</em>
+      </li>
+    </ul>
+  </div>
+
+  <div class="order-list">
+    <h3 class="tab-wrap">
+      <span class="tab-active" data-type="1">持有中(<em>0</em>)</span>
+      <span data-type="2">已赎回(<em>1</em>)</span>
+      <span data-type="0">已关闭(<em>0</em>)</span>
+    </h3>
+    <div class="ui-paging">
+      <p class="alert alert-normal product-tips f-hide">网页版暂不支持显示<em id="noOrder"></em>订单详情，请前往立马理财APP查看。</p>
+      <ol class="paging-list" style="display: none;"></ol>
+      <div class="paging-tip paging-empty" style="display: block;"><div><img src="//www.lmlccdn.com/www.lmlc.com.new/cdn/desktop/user/center/index/img/50.6fdc42034b.png"></div><p>立马理财，走向人生巅峰！</p><p><a class="btn btn-primary" href="/">立即抢购</a></p></div>
+      <div class="paging-bar" style="display: none;"></div>
+      <div class="paging-mask-bg"></div></div>
 
 
-</div>
-
-<div class="container">
-
+  </div>
 </div>
