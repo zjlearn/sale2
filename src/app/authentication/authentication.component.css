@@ -1,5 +1,5 @@
 /**
-具体的值待参考
+具体的值待设计， 最小高度
  */
 .main{
   display: block;
@@ -10,6 +10,7 @@
 }
 .auth-card {
   width: 500px;
+  margin: 100px auto;
 }
 
 mat-form-field {
