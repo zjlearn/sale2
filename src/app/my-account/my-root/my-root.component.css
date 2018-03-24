@@ -1,95 +1,3 @@
-/*.wrapper {*/
-  /*position: relative;*/
-  /*top: 0;*/
-  /*height: 100vh;*/
-  /*display: flex;*/
-  /*width: 200px;*/
-  /*flex: 1;*/
-  /*margin: 0 auto;*/
-/*}*/
-
-/*#sidebarWapperContainer{*/
-  /*width: 20%;*/
-  /*float:left;*/
-  /*height: 100%;*/
-  /*border: solid 5px red ;*/
-  /*margin-left: 20px;*/
-  /*margin-top: 20px;*/
-/*}*/
-/*.sidebar-wrapper {*/
-  /*overflow-y: auto;*/
-  /*padding-bottom: 30px;*/
-  /*position: relative;*/
-  /*height: 100%;*/
-/*}*/
-
-/*.nav-container {*/
-  /*position: relative;*/
-/*}*/
-
-/*.nav {*/
-  /*padding-top: 15px;*/
-/*}*/
-
-/*.nav li {*/
-  /*margin-bottom: 9px;*/
-/*}*/
-
-/*.nav li a {*/
-  /*display: flex;*/
-  /*align-items: center;*/
-  /*color: rgba(0, 0, 0, .8);*/
-  /*margin: 0 15px;*/
-  /*border-radius: 3px;*/
-  /*-webkit-transition: all 400ms;*/
-  /*-moz-transition: all 400ms;*/
-  /*-ms-transition: all 400ms;*/
-  /*-o-transition: all 400ms;*/
-  /*transition: all 400ms;*/
-  /*height: 50px;*/
-  /*text-decoration: none;*/
-/*}*/
-
-/*.nav li a:hover, .parent-active {*/
-  /*background-color: rgba(255, 255, 255, .1);*/
-/*}*/
-
-/*.nav li a span {*/
-  /*margin-left: 20px;*/
-/*}*/
-
-/*.active a, .active a:hover {*/
-  /*!*color: rgba(0,0,0,.6) !important;*!*/
-  /*!*background-color: #fff !important;*!*/
-  /*box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(60, 72, 88, 0.4);*/
-  /*-webkit-transition: all 400ms;*/
-  /*-moz-transition: all 400ms;*/
-  /*-ms-transition: all 400ms;*/
-  /*-o-transition: all 400ms;*/
-  /*transition: all 400ms;*/
-/*}*/
-
-
-/*.note{*/
-  /*font-size: 2px*/
-
-/*}*/
-
-/*.material-icons{*/
-  /*font-size: 24px;*/
-/*}*/
-
-/*#personInfoWapper{*/
-  /*margin-top: 5px;*/
-/*}*/
-
-
-/*.main-panel{*/
-  /*width: 100%;*/
-  /*flex: 1;*/
-  /*padding-left: 260px;*/
-/*}*/
-
 #main {
   padding-top: 15px;
   padding-bottom: 35px;
@@ -113,34 +21,47 @@
 }
 
 /*@media screen and (max-width: 1280px)*/
-  #guideBar {
-    left: auto;
-    right: 0;
-    margin: 0;
-  }
-  #guideBar {
-    position: fixed;
-    left: 50%;
-    bottom: 160px;
-    margin-left: 608px;
-    width: 44px;
-    min-width: 44px;
-    z-index: 1000;
-  }
+#guideBar {
+  left: auto;
+  right: 0;
+  margin: 0;
+}
+
+#guideBar {
+  position: fixed;
+  left: 50%;
+  bottom: 160px;
+  margin-left: 608px;
+  width: 44px;
+  min-width: 44px;
+  z-index: 1000;
+}
 
 #main .g-ctn {
   position: relative;
   width: 1180px;
 }
+
 .g-ctn {
   display: block;
   width: 1180px;
   margin: 0 auto;
   background: #FFF;
 }
+
+/*含义是clearBoth*/
 .f-cb {
   display: block;
   zoom: 1;
+}
+
+.f-cb:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
 }
 
 #main .g-sd {
@@ -165,7 +86,6 @@
   width: 240px;
   position: relative;
 }
-
 
 #main .m-user:after {
   content: "";
@@ -193,4 +113,48 @@
   color: #666;
 }
 
+.active-link {
+  margin-right: -1px;
+  background: #FFF;
+  cursor: default;
+  border-left: 3px solid #4990e2;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  color: #4567cc;
+}
 
+#main .m-nav a {
+  position: relative;
+  border-left: 3px solid transparent;
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  font-size: 16px;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 27px;
+  padding-right: 18px;
+  color: #333;
+}
+
+/*设置左侧箭头的css*/
+
+/*!*#main .m-nav a .arrow {*!*/
+/*!*float: right;*!*/
+/*!*font-size: 28px;*!*/
+/*!*color: #e3e3e3;*!*/
+/*!*height: 59px;*!*/
+/*!*}*!*/
+/*.iconfont {*/
+/*font-family: iconfont!important;*/
+/*font-size: 16px;*/
+/*font-style: normal;*/
+/*-webkit-font-smoothing: antialiased;*/
+/*-webkit-text-stroke-width: .2px;*/
+/*-moz-osx-font-smoothing: grayscale;*/
+/*}*/
+
+.material-icons {
+  margin: auto auto;
+}

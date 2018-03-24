@@ -11,13 +11,13 @@ import {MyRootComponent} from './my-account/my-root/my-root.component';
 import {OverviewComponent} from './my-account/overview/overview.component';
 import {MyLoanComponent} from './my-account/my-loan/my-loan.component';
 import {MyInvestComponent} from './my-account/my-invest/my-invest.component';
-import {MyNavComponent} from './my-account/my-nav/my-nav.component';
 import {MessageComponent} from './my-account/message/message.component';
 import {RecordComponent} from './my-account/record/record.component';
 import {HelpComponent} from './help-center/help/help.component';
 import {LoginHelpComponent} from './help-center/login-help/login-help.component';
 import {PwHelpComponent} from './help-center/pw-help/pw-help.component';
 import {ReauthHelpComponent} from './help-center/reauth-help/reauth-help.component';
+import {AuthenticationComponent} from './authentication/authentication.component';
 
 
 // 组件之间的路由关系
@@ -30,6 +30,7 @@ export const routes: Routes = [
   {path: 'aboutUs', component: AboutUsComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'ipsForm', component: IpsFormComponent},
+  {path: 'auth', component: AuthenticationComponent},
   {
     path: 'account', component: MyRootComponent, children: [
       {path: '', component: OverviewComponent},

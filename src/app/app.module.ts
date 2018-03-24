@@ -39,6 +39,7 @@ import { ReauthHelpComponent } from './help-center/reauth-help/reauth-help.compo
 import { TempComponent } from './help-center/temp/temp.component';
 import {UserService} from './shared/services/user.service';
 import {AuthGuardService} from './shared/services/auth-guard.service';
+import { AuthenticationComponent } from './authentication/authentication.component';
 
 
 @NgModule({
@@ -71,7 +72,8 @@ import {AuthGuardService} from './shared/services/auth-guard.service';
     LoginHelpComponent,
     PwHelpComponent,
     ReauthHelpComponent,
-    TempComponent
+    TempComponent,
+    AuthenticationComponent
   ],
   imports: [
     BrowserModule,

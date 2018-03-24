@@ -1,0 +1,22 @@
+/**
+具体的值待参考
+ */
+.main{
+  display: block;
+  width: 100%;
+  min-width: 1180px;
+  position: relative;
+  min-height: 800px;
+}
+.auth-card {
+  width: 500px;
+}
+
+mat-form-field {
+  display: block;
+}
+
+.mainButton {
+  width: 300px;
+  margin: 10px auto;
+}
