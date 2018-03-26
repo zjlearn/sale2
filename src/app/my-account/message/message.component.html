@@ -1,45 +1,34 @@
-<div class="container">
-  <h3>消息中心</h3>
-  <mat-divider></mat-divider>
-  <div class="container">
-    <div class="row d-flex justify-content-start">
-      <mat-select class="col-lg-2" placeholder="消息类别">
-        <mat-option *ngFor="let messageType of messageTypes" [value]="messageType.type">
-          {{ messageType.desc }}
-        </mat-option>
-      </mat-select>
-      <mat-select class="col-lg-2" placeholder="消息状态">
-        <mat-option *ngFor="let messageType of messageTypes" [value]="messageType.type">
-          {{ messageType.desc }}
-        </mat-option>
-      </mat-select>
-
+<div class="g-mn wrap">
+  <h2 class="m-title">消息中心</h2>
+  <ul class="tab-hd">
+    <li class="tab-sel tab-active" data-id="0">全部消息</li>
+    <li class="tab-sel" data-id="1">理财动态</li>
+    <li class="tab-sel" data-id="2">精彩活动</li>
+    <li class="tab-sel" data-id="3">通知公告</li>
+  </ul>
+  <div class="m-notices ui-paging">
+    <ul class="paging-list">
+      <li>
+        <div class="title f-cb"><span class="f-fl " style="background-color:#1fae0c">保险</span> <em
+          class="f-fl">年年盈产品通知</em> <i class="f-fr">03-23</i></div>
+        <div class="content f-cb"><span class="f-fl">「通知」6%年年盈预计下周售罄，最后尾量！抢到就是赚→</span> <a class="f-fr "
+                                                                                           href="https://www.lmlc.com/web/product/product_detail.html?id=20180201183559PD245656">查看</a>
+        </div>
+      </li>
+      <li>
+        <div class="title f-cb"><span class="f-fl " style="background-color:#fcb50a">公告</span> <em class="f-fl">招商银行临时维护通知</em>
+          <i class="f-fr">01-11</i></div>
+        <div class="content f-cb"><span class="f-fl">尊敬的用户，由于支付通道临时维护，招商银行支付的处理时间可能会延长1~3分钟，请耐心等待。为您带来的不便，敬请谅解。</span>
+          <a class="f-fr  f-hide" href="">查看</a></div>
+      </li>
+    </ul>
+    <div class="paging-tip paging-loading" style="display: none;">
+      <div class="loading-bar">
+        <div class="bg"></div>
+        <i class="u-loading-small"></i>正在加载中
+      </div>
     </div>
-    <mat-divider></mat-divider>
-
-    <!--消息过滤的结果展示-->
-    <mat-table #table [dataSource]="dataSource">
-      <!-- Position Column -->
-      <ng-container matColumnDef="messageType">
-        <mat-header-cell *matHeaderCellDef> 消息类型 </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.messageType}} </mat-cell>
-      </ng-container>
-
-      <!-- Name Column -->
-      <ng-container matColumnDef="content">
-        <mat-header-cell *matHeaderCellDef> 消息内容 </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.content}} </mat-cell>
-      </ng-container>
-
-      <!-- Weight Column -->
-      <ng-container matColumnDef="time">
-        <mat-header-cell *matHeaderCellDef> 发送时间 </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.time}} </mat-cell>
-      </ng-container>
-
-      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-    </mat-table>
-
+    <div class="paging-bar" style="display: none;"></div>
+    <div class="paging-mask-bg"></div>
   </div>
 </div>

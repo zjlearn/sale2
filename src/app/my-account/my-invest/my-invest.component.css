@@ -7,6 +7,22 @@
   float: right;
 }
 
+.g-mn .title {
+  font-size: 18px;
+}
+
+.title {
+  text-align: left;
+  border-bottom: 1px solid #e5ebf0;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+
 .my-asset-nobalance {
   border-bottom: 1px solid #e5ebf0;
   text-align: center;
@@ -18,6 +34,7 @@
   font-size: 16px;
   margin-top: 20px;
 }
+
 .ui-paging {
   position: relative;
 }
@@ -45,4 +62,75 @@
 
 .f-hide {
   display: none;
+}
+
+.my-asset-nobalance .first {
+  width: 320px;
+  border-right: 1px solid #e5ebf0;
+  font: 20px/1.2 "Microsoft Yahei";
+  text-align: center;
+}
+
+.my-asset-nobalance li {
+  float: left;
+  height: 100px;
+  width: 250px;
+  margin: 25px 0;
+  font-size: 18px;
+}
+
+.my-asset-nobalance li b {
+  font-size: 47px;
+}
+
+.wordSpacing0 {
+  word-spacing: -8px;
+}
+
+my-asset-nobalance li i {
+  font-size: 32px;
+  line-height: 56px;
+}
+
+.my-asset-nobalance li em {
+  font-size: 14px;
+  color: #999;
+}
+
+.my-asset-nobalance li em {
+  font-size: 14px;
+  color: #999;
+}
+
+/**
+tab对应的
+ */
+
+tab-wrap {
+  border-bottom: 1px solid #4567cc;
+  height: 39px;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.tab-wrap tab-active {
+  background-color: #4567cc;
+  color: #fff;
+  cursor: default;
+}
+
+.tab-wrap span {
+  padding: 0 20px;
+  line-height: 39px;
+  float: left;
+  margin-right: 15px;
+  cursor: pointer;
+  color: #666;
+}
+
+.tab-wrap {
+  border-bottom: 1px solid #4567cc;
+  height: 39px;
+  font-size: 16px;
+  margin-top: 20px;
 }

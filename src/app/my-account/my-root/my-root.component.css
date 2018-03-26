@@ -158,3 +158,10 @@
 .material-icons {
   margin: auto auto;
 }
+
+.m-nav material-icons {
+  float: right;
+  font-size: 28px;
+  color: #e3e3e3;
+  height: 59px;
+}

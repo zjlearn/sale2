@@ -7,15 +7,15 @@
   float: right;
 }
 
-.g-mn .title {
+.coupon {
+  font-size: 16px;
+}
+
+.coupon .m-content {
+  padding: 15px 0 25px 0;
+}
+
+.coupon .m-content .title {
   font-size: 18px;
-}
-
-.title {
-  padding: 15px 0 30px;
   color: #333;
-}
-
-.searchTable{
-  margin-top: 10px;
 }

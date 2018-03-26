@@ -1,4 +1,4 @@
-<div id="main" class="f-cb clearfix">
+<div id="main" class="f-cb clearfix" xmlns="http://www.w3.org/1999/html">
 
   <div id="guideBar">
     <a href="javascript:;" class="item gotop J_goTop" data-tar="" style="height: 0px; display: none;"></a>
@@ -40,7 +40,7 @@
               <div class="note"><a href="/web/page/login/account/bindLmlcPhone.html">马上绑定</a></div>
             </dd>
             <dd class="">
-              <a class="icon-wrap" href="/web/page/login/success/risk_assess.html">
+              <a class="icon-wrap" routerLink="auth">
                 <i class="material-icons">assignment</i>
               </a>
               <p class="note">已评估</p>
@@ -54,34 +54,26 @@
 
       <nav class="m-nav J_nav">
         <a class="f-cb active" routerLink="overView" routerLinkActive="active-link">
-          <em><i class="iconfont"></i>资产总览</em>
+          <em><i class="material-icons"></i>资产总览</em>
           <i class="material-icons">chevron_right</i>
         </a>
         <a class="f-cb " routerLink="myInvest" routerLinkActive="active-link">
           <em><i class="iconfont"></i>我的理财</em>
           <i class="iconfont arrow"></i>
         </a>
-        <a class="f-cb treasury" routerLink="overView" routerLinkActive="active-link">
-          <em><i class="iconfont"></i>立马金库</em>
-          <i class="iconfont arrow"></i>
-        </a>
-        <a class="f-cb " routerLink="overView" routerLinkActive="active-link">
+        <a class="f-cb " routerLink="record" routerLinkActive="active-link">
           <em><i class="iconfont"></i>交易记录</em>
           <i class="iconfont arrow"></i>
         </a>
-        <a class="f-cb " routerLink="overView" routerLinkActive="active-link">
-          <em><i class="iconfont bank-icon"></i>我的银行卡</em>
-          <i class="iconfont arrow"></i>
-        </a>
-        <a class="f-cb " routerLink="overView" routerLinkActive="active-link">
-          <em><i class="iconfont"></i>红包 福利券</em>
+        <a class="f-cb " routerLink="coupon" routerLinkActive="active-link">
+          <em><i class="iconfont"></i>红包福利券</em>
           <i class="iconfont arrow"></i>
         </a>
         <a class="f-cb center-msg " routerLink="message" routerLinkActive="active-link">
           <em><i class="iconfont"></i>消息中心</em>
           <i class="iconfont arrow"></i>
         </a>
-        <a class="f-cb account " routerLink="overView" routerLinkActive="active-link">
+        <a class="f-cb account " routerLink="setting" routerLinkActive="active-link">
           <em><i class="iconfont"></i>账户设置</em>
           <i class="iconfont arrow"></i>
         </a>
@@ -91,8 +83,6 @@
           <p>扫一扫&nbsp;随时随地安心理财</p>
         </div>
       </nav>
-
-
     </div>
 
     <div id="main-panel" class="main-panel">

@@ -1,36 +1,45 @@
-<div class="container">
-  <h3>交易记录</h3>
+<div class="g-mn">
+  <div class="container">
+    <h3 class="title">交易记录</h3>
+    <mat-tab-group>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          全部
+        </ng-template>
+        <div class="container">
+          <div class="row">
+            <button mat-button class="col-md-1">近一周</button>
+            <button mat-button class="col-md-1">近一月</button>
+            <button mat-button class="col-md-1">全部</button>
+            <form>
+              <mat-form-field>
+                <input matInput [matDatepicker]="picker" placeholder="开始时间">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput [matDatepicker]="picker1" placeholder="结束时间">
+                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
+              </mat-form-field>
+              <button mat-raised-button color="primary" type="submit">查询</button>
+            </form>
+          </div>
+          <!--具体的交易记录信息-->
+          <div class="searchTable">
 
-  <mat-tab-group>
-    <mat-tab label="全部">
-      <div class="container">
-        <div>
-          <button mat-button color="primary">近一周</button>
-          <button mat-button color="primary">近一月</button>
-          <button mat-button color="primary">全部</button>
-          <mat-form-field>
-            <input matInput [matDatepicker]="picker" placeholder="开始时间">
-            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
-          </mat-form-field>
-          <mat-form-field>
-            <input matInput [matDatepicker]="picker1" placeholder="结束时间">
-            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
-          </mat-form-field>
-          <button mat-button color="primary">查询</button>
+
+          </div>
         </div>
-
-      </div>
-
-    </mat-tab>
-    <mat-tab label="理财">
-      <h1>Some more tab content</h1>
-      <p>...</p>
-    </mat-tab>
-    <mat-tab label="余额">
-      <h1>Some more tab content</h1>
-      <p>...</p>
-    </mat-tab>
-  </mat-tab-group>
+      </mat-tab>
+      <mat-tab label="理财">
+        <h1>Some more tab content</h1>
+        <p>...</p>
+      </mat-tab>
+      <mat-tab label="余额">
+        <h1>Some more tab content</h1>
+        <p>...</p>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
 </div>

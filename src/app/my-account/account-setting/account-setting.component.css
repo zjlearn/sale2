@@ -1,0 +1,71 @@
+.g-mn {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 940px;
+  padding: 15px 38px 0;
+  color: #333;
+  float: right;
+}
+
+.m-content .page-tip {
+  font-size: 18px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #eee;
+  margin-top: 15px;
+  color: #333;
+}
+.m-content .conbox {
+  border-bottom: 1px solid #e5ebf0;
+  font-size: 14px;
+  padding: 20px 0 15px;
+  line-height: 24px;
+  color: #666;
+}
+
+.m-content .conbox .alltext {
+  padding-right: 100px;
+}
+.m-content .icon-warning {
+  background-position: left top;
+  background-position-x: left;
+  background-position-y: top;
+}
+.m-content .icon {
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 21px;
+  height: 21px;
+  background: url(//www.lmlccdn.com/www.lmlc.com.new/cdn/desktop/user/center/account/img/account_set.421cff9aab.png) no-repeat;
+}
+
+.m-content .no-border {
+  border: none;
+}
+
+.m-content .conbox .alltext {
+  padding-right: 100px;
+}
+
+.m-content .page-tip2 {
+  margin-top: 40px;
+}
+
+.m-content .conbox .f-cb {
+  color: #333;
+  margin-bottom: 10px;
+  padding-left: 30px;
+  position: relative;
+  font-size: 16px;
+}
+
+.m-content .conbox .J_type {
+  display: inline-block;
+  background-color: #4990e2;
+  color: #fff;
+  padding: 0 4px;
+  font-size: 12px;
+  margin-left: 10px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
