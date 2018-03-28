@@ -39,7 +39,11 @@ import { ReauthHelpComponent } from './help-center/reauth-help/reauth-help.compo
 import { TempComponent } from './help-center/temp/temp.component';
 import {UserService} from './shared/services/user.service';
 import {AuthGuardService} from './shared/services/auth-guard.service';
-import { AuthenticationComponent } from './authentication/authentication.component';
+import { AuthenticationComponent } from './my-account/authentication/authentication.component';
+import { CouponComponent } from './my-account/coupon/coupon.component';
+import { AccountSettingComponent } from './my-account/account-setting/account-setting.component';
+import { DepositComponent } from './my-account/deposit/deposit.component';
+import { WithdrawComponent } from './my-account/withdraw/withdraw.component';
 
 
 @NgModule({
@@ -73,7 +77,11 @@ import { AuthenticationComponent } from './authentication/authentication.compone
     PwHelpComponent,
     ReauthHelpComponent,
     TempComponent,
-    AuthenticationComponent
+    AuthenticationComponent,
+    CouponComponent,
+    AccountSettingComponent,
+    DepositComponent,
+    WithdrawComponent
   ],
   imports: [
     BrowserModule,

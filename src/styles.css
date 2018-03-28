@@ -516,6 +516,9 @@ b {
   box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.42), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 }
 
+/**
+立马理财得到的css脚本
+ */
 .f-fr {
   float: right;
 }
@@ -530,4 +533,17 @@ b {
   height:0;
   visibility:hidden;
   clear:both;
+}
+.f-cb {
+  display: block;
+  zoom: 1;
+}
+
+.f-cb:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
 }

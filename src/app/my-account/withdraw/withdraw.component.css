@@ -1,0 +1,23 @@
+/**
+具体的值待设计， 最小高度
+ */
+.main{
+  display: block;
+  width: 100%;
+  min-width: 1180px;
+  position: relative;
+  min-height: 800px;
+}
+.auth-card {
+  width: 500px;
+  margin: 100px auto;
+}
+
+mat-form-field {
+  display: block;
+}
+
+.mainButton {
+  width: 300px;
+  margin: 10px auto;
+}

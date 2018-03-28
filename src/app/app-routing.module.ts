@@ -17,7 +17,11 @@ import {HelpComponent} from './help-center/help/help.component';
 import {LoginHelpComponent} from './help-center/login-help/login-help.component';
 import {PwHelpComponent} from './help-center/pw-help/pw-help.component';
 import {ReauthHelpComponent} from './help-center/reauth-help/reauth-help.component';
-import {AuthenticationComponent} from './authentication/authentication.component';
+import {AuthenticationComponent} from './my-account/authentication/authentication.component';
+import {CouponComponent} from './my-account/coupon/coupon.component';
+import {AccountSettingComponent} from './my-account/account-setting/account-setting.component';
+import {DepositComponent} from './my-account/deposit/deposit.component';
+import {WithdrawComponent} from './my-account/withdraw/withdraw.component';
 
 
 // 组件之间的路由关系
@@ -30,7 +34,6 @@ export const routes: Routes = [
   {path: 'aboutUs', component: AboutUsComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'ipsForm', component: IpsFormComponent},
-  {path: 'auth', component: AuthenticationComponent},
   {
     path: 'account', component: MyRootComponent, children: [
       {path: '', component: OverviewComponent},
@@ -38,7 +41,12 @@ export const routes: Routes = [
       {path: 'myInvest', component: MyInvestComponent},
       {path: 'overView', component: OverviewComponent},
       {path: 'message', component: MessageComponent},
-      {path: 'record', component: RecordComponent}
+      {path: 'record', component: RecordComponent},
+      {path: 'coupon', component: CouponComponent},
+      {path: 'setting', component: AccountSettingComponent},
+      {path: 'auth', component: AuthenticationComponent},
+      {path: 'deposit', component: DepositComponent},
+      {path: 'withdraw', component: WithdrawComponent},
     ]
   }, {
     path: 'help', component: HelpComponent, children: [
