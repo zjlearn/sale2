@@ -17,8 +17,7 @@ import {HelpComponent} from './help-center/help/help.component';
 import {LoginHelpComponent} from './help-center/login-help/login-help.component';
 import {PwHelpComponent} from './help-center/pw-help/pw-help.component';
 import {ReauthHelpComponent} from './help-center/reauth-help/reauth-help.component';
-import {AuthenticationComponent} from './authentication/authentication.component';
-
+import {AuthenticationComponent} from './my-account/authentication/authentication.component';
 
 // 组件之间的路由关系
 export const routes: Routes = [
@@ -30,7 +29,7 @@ export const routes: Routes = [
   {path: 'aboutUs', component: AboutUsComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'ipsForm', component: IpsFormComponent},
-  {path: 'auth', component: AuthenticationComponent},
+
   {
     path: 'account', component: MyRootComponent, children: [
       {path: '', component: OverviewComponent},
@@ -38,7 +37,8 @@ export const routes: Routes = [
       {path: 'myInvest', component: MyInvestComponent},
       {path: 'overView', component: OverviewComponent},
       {path: 'message', component: MessageComponent},
-      {path: 'record', component: RecordComponent}
+      {path: 'record', component: RecordComponent},
+      {path: 'auth', component: AuthenticationComponent},
     ]
   }, {
     path: 'help', component: HelpComponent, children: [
