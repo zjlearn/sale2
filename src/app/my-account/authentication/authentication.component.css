@@ -1,23 +1,60 @@
-/**
-具体的值待设计， 最小高度
- */
-.main{
+.j-card {
+  background: #fff;
+}
+.main-section {
+  width: 1080px;
+  margin: 30px auto;
+}
+
+#cmbc-open .content {
+  height: auto;
+  padding-bottom: 40px;
+}
+
+#pg-account-security .content {
+  width: 1080px;
+  height: 440px;
+  margin-top: 20px;
+}
+
+
+.content .setting-section-title {
+  text-align: left;
+  padding-left: 20px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 16px;
+  color: #333;
+  border-bottom: 1px solid #ebebeb;
+}
+
+#cmbc-open .content .cmbc-tips {
+  height: 40px;
+  line-height: 40px;
+  margin: 20px 20px 50px;
+  padding-left: 51px;
+  background: #FFFAF3;
+  font-size: 12px;
+  color: #ED932D;
+}
+
+
+#cmbc-open .content .cmbc-open-logo img {
   display: block;
+  width: 180px;
+  margin: 0 auto;
+}
+
+
+.wdg-open-account-and-bind-card-form .input-box {
   width: 100%;
-  min-width: 1180px;
+  text-align: center;
   position: relative;
-  min-height: 800px;
-}
-.auth-card {
-  width: 500px;
-  margin: 100px auto;
+  margin-top: 12px;
+  height: 40px;
+  line-height: 40px;
 }
 
-mat-form-field {
-  display: block;
-}
-
-.mainButton {
-  width: 300px;
-  margin: 10px auto;
+.ips-form{
+  display: none;
 }

@@ -1,4 +1,28 @@
-mat-divider{
-  margin-top: 20px;
-  margin-bottom: 20px;
+.h1Title {
+  font-size: 18px;
+  line-height: 60px;
+  border-bottom: 1px solid #e5ebf0;
+}
+
+.dldiv {
+  padding: 20px 0 22px;
+  line-height: 28px;
+}
+
+.dldiv .proTitle {
+  color: #333;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.dldiv .proCon {
+  padding-left: 20px;
+  padding-bottom: 10px;
+  line-height: 28px;
+  overflow: hidden;
+  color: #666;
+}
+
+.dldiv .proTitle .proA {
+  color: #333;
 }

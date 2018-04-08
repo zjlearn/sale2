@@ -39,8 +39,6 @@ export class LoginComponent implements OnInit {
       console.log(data);
     });
     console.log('登录成功！！');
-    // 发射登录成功的信息
-    this.userService.isLogin = true;
     // 登录完成之后，跳转到主页
     this.router.navigate(['/home']);
   }
@@ -58,8 +56,6 @@ export class LoginComponent implements OnInit {
       console.log(data);
     });
     console.log('注册成功！！');
-    // 发射注册的成功的信息
-    this.userService.isLogin = true;
     // 注册完成之后 跳转到主页
     this.router.navigate(['/home']);
   }

@@ -12,14 +12,14 @@
       <li class="channel-item "><a rel="nofollow" href="/pc/points.html">我的积分</a></li>
       <li class="channel-item "><a rel="nofollow" routerLink="help">帮助中心</a></li>
       <li class="channel-item "><a rel="nofollow" routerLink="ipsForm">ipsForm</a></li>
-      <li *ngIf="!this.userService.isLogin" class="user-item fn-clear" num="">
+      <li *ngIf="!this.userService.user" class="user-item fn-clear" num="">
         <div class="denglu">
           <a target="_self" rel="nofollow"
              href="/pc/passport/index/register?registerSource=web_top&amp;wpFromPos=topHeader">注册</a> /
           <a target="_self" rel="nofollow" routerLink="login">登录</a>
         </div>
       </li>
-      <li *ngIf="this.userService.isLogin" class="user-item fn-clear" num="">
+      <li *ngIf="this.userService.user" class="user-item fn-clear" num="">
         <div class="denglu">
           <a target="_self" rel="nofollow" routerLink="/account">个人中心</a>
         </div>

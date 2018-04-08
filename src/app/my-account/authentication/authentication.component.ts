@@ -1,6 +1,7 @@
 import {Component, ElementRef, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {HttpClient} from '@angular/common/http';
+import {Result} from '../../shared/models/Result';
 
 /**
  * 负责实名制认证的功能
@@ -34,11 +35,11 @@ export class AuthenticationComponent implements OnInit {
    * 实名认证的过程， 该过程会请求后端auth服务， 返回相应的sign request等信息，
    */
   auth() {
-    this.http.post('http://localhost:4200/xhr/ips/userRegister', this.authForm.value).subscribe(data => {
-      this.sign = data['sign'];
-      this.request = data['request'];
-      this.operationType = data['operationType'];
-      this.merchantID = data['merchantID'];
+    this.http.post<Result>('http://localhost:4200/xhr/ips/userRegister', this.authForm.value).subscribe(result => {
+      this.sign = result.data['sign'];
+      this.request = result.data['request'];
+      this.operationType = result.data['operationType'];
+      this.merchantID = result.data['merchantID'];
     });
     this.ipsFormSubmit();
   }
@@ -47,14 +48,14 @@ export class AuthenticationComponent implements OnInit {
    *该函数用于提交该表单
    */
   ipsFormSubmit() {
-    setTimeout(100);
+    setTimeout(5000);
     const test = this.elRef.nativeElement.querySelector('#ipsForm');
     console.log(this.sign);
     console.log(this.request);
     console.log(this.merchantID);
     setTimeout(() => {
       test.submit();
-    }, 500);
+    }, 1000);
   }
 
 }
