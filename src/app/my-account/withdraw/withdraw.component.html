@@ -1,0 +1,45 @@
+<div class="main">
+  <mat-card class="auth-card">
+    <mat-card-header>
+      <mat-card-title>账户提现</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="withdrawForm">
+        <mat-label>当前可用余额：{{balance}}}</mat-label>
+        <mat-form-field>
+          <input matInput placeholder="提现金额" formControlName="amount">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="手续费" formControlName="charges" value="{{charges}}">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="实际金额" formControlName="realAmount" value="">
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" class="mainButton" (click)="deposit()">确认提现</button>
+    </mat-card-actions>
+  </mat-card>
+  <!--下面是默认的提交表单-->
+  <div class="ips-form" style="display: none">
+    <form ngNoForm method="post" id="ipsForm" action="http://113.207.54.122:8011/p2p-dep/gateway.htm">
+      <ng-template>IPS页面表单提交</ng-template>
+      <mat-form-field>
+        <input matInput placeholder="merchantID" name="merchantID" [(ngModel)]="merchantID" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="operationType" name='operationType' [(ngModel)]="operationType" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="request" name='request' [(ngModel)]="request" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="sign" name='sign' [(ngModel)]="sign" required>
+      </mat-form-field>
+      <div>
+        <button mat-button type="submit"> 提交</button>
+      </div>
+    </form>
+  </div>
+</div>

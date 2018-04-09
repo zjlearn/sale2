@@ -48,16 +48,16 @@ export class IpsFormComponent implements OnInit, AfterViewInit {
 
 
   ngAfterViewInit(): void {
-    // setTimeout(100);
-    // const test = this.elRef.nativeElement.querySelector('#ipsForm');
-    // console.log(test);
-    // console.log('haha ipsForm');
-    // console.log(this.sign);
-    // console.log(this.request);
-    // console.log(this.merchantID);
-    // setTimeout(() => {
-    //   test.submit();
-    // }, 500);
+    setTimeout(100);
+    const test = this.elRef.nativeElement.querySelector('#ipsForm');
+    console.log(test);
+    console.log('haha ipsForm');
+    console.log(this.sign);
+    console.log(this.request);
+    console.log(this.merchantID);
+    setTimeout(() => {
+      test.submit();
+    }, 500);
   }
 
   /**
