@@ -7,6 +7,13 @@
   width: 1180px
 }
 
+.g-ctn {
+  display: block;
+  width: 1180px;
+  margin: 0 auto;
+  background: #FFF;
+}
+
 #main .g-sd {
   width: 280px;
   height: 100%;
@@ -243,15 +250,9 @@
 #main .m-help .dldiv .proCon th {
   font-weight: 700
 }
-.f-fl{
-  float: left;
-}
 
-.f-fr{
-  float: right;
-}
 
-mat-divider{
+mat-divider {
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -279,3 +280,10 @@ mat-divider{
 }
 
 
+#main .g-mn .foot {
+  border-top: 1px solid #e5ebf0;
+  height: 128px;
+  text-align: center;
+  padding-top: 50px;
+  margin-top: 20px;
+}

@@ -5,21 +5,21 @@ import {Result} from '../models/Result';
 
 @Injectable()
 export class UserService {
-  public isLogin: boolean;
-  public userName: string;
+  public user: User;
 
   constructor(private http: HttpClient) {
     this.getUser();
-    if (this.userName != null) {
-      this.isLogin = true;
-    }
   }
 
+  /**
+   * 获取当前登录的用户信息
+   */
   getUser() {
-    this.http.get<Result>('http://localhost:4200/xhr/user/getUserName').subscribe(
+    this.http.get<Result>('http://localhost:4200/xhr/user/currentUser').subscribe(
       data => {
-        this.userName = data.data;
+        this.user = data.data;
       }
     );
+    console.log('get user' + this.user);
   }
 }

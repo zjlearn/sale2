@@ -10,6 +10,8 @@ import {UserService} from '../services/user.service';
 export class SecondHeaderComponent implements OnInit {
 
   constructor(public userService: UserService) {
+    this.userService.getUser();
+    console.log('构造second header');
   }
 
   ngOnInit() {

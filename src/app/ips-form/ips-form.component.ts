@@ -34,12 +34,6 @@ export class IpsFormComponent implements OnInit, AfterViewInit {
       this.operationType = data['operationType'];
       this.merchantID = data['merchantID'];
     });
-    // this.http.get('http://localhost:4200/xhr/ips/getSign').subscribe(data => {
-    //   this.ipsForm.get('sign').setValue(data['sign']);
-    //   this.ipsForm.get('request').setValue(data['request']);
-    //   this.ipsForm.get('operationType').setValue(data['operationType']);
-    //   this.ipsForm.get('merchantID').setValue(data['merchantID']);
-    // });
   }
 
   ngOnInit() {
@@ -48,7 +42,7 @@ export class IpsFormComponent implements OnInit, AfterViewInit {
 
 
   ngAfterViewInit(): void {
-    setTimeout(100);
+    setTimeout(2000);
     const test = this.elRef.nativeElement.querySelector('#ipsForm');
     console.log(test);
     console.log('haha ipsForm');
@@ -57,7 +51,7 @@ export class IpsFormComponent implements OnInit, AfterViewInit {
     console.log(this.merchantID);
     setTimeout(() => {
       test.submit();
-    }, 500);
+    }, 1000);
   }
 
   /**

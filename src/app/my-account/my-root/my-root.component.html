@@ -20,27 +20,29 @@
   <div class="g-ctn f-cb">
     <div class="g-sd J_navList" style="height: 2917px">
       <div class="m-user">
-        <div [style.color]="normalFontColor">
-          <img src="" class="logo-img" alt="头像"/>
+        <div >
+          <img src="../../../assets/image/portrait.png" class="logo-img" alt="头像"/>
           <span>张军</span>
           <span>zj_learn@163.com</span>
         </div>
 
         <div id="personInfoWapper">
           <dl class="d-flex justify-content-between align-items-center">
-            <dd class="">
+            <dd  class="">
               <!--包裹icon的集合-->
-              <span class="icon-wrap"><i class="material-icons ">faces</i></span>
-              <p class="note">身份待认证</p>
+              <span class="icon-wrap"><i class="material-icons">account_balance</i></span>
+              <div *ngIf="user.ipsAccount" class="note">存管已开通</div>
+              <div *ngIf="!user.ipsAccount" class="note">存管未开通</div>
             </dd>
             <dd class="">
               <a class="icon-wrap" href="/web/page/login/account/bindLmlcPhone.html">
                 <i class="material-icons">smartphone</i>
               </a>
-              <div class="note"><a href="/web/page/login/account/bindLmlcPhone.html">马上绑定</a></div>
+              <div *ngIf="!user.mobile" class="note"><a >马上绑定</a></div>
+              <div *ngIf="user.mobile" class="note"><a >已绑定</a></div>
             </dd>
             <dd class="">
-              <a class="icon-wrap" routerLink="auth">
+              <a class="icon-wrap" routerLink="/auth">
                 <i class="material-icons">assignment</i>
               </a>
               <p class="note">已评估</p>
@@ -50,7 +52,7 @@
       </div>
 
 
-      <mat-divider [style.background-color]="dividerBgColor"></mat-divider>
+      <mat-divider ></mat-divider>
 
       <nav class="m-nav J_nav">
         <a class="f-cb active" routerLink="overView" routerLinkActive="active-link">

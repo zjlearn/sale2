@@ -44,6 +44,7 @@ import { CouponComponent } from './my-account/coupon/coupon.component';
 import { AccountSettingComponent } from './my-account/account-setting/account-setting.component';
 import { DepositComponent } from './my-account/deposit/deposit.component';
 import { WithdrawComponent } from './my-account/withdraw/withdraw.component';
+import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 
 
 
@@ -93,7 +94,8 @@ import { WithdrawComponent } from './my-account/withdraw/withdraw.component';
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [ProductService, UserService, AuthGuardService],
+  providers: [ProductService, UserService, AuthGuardService,
+    {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

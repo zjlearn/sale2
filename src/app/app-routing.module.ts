@@ -22,6 +22,9 @@ import {CouponComponent} from './my-account/coupon/coupon.component';
 import {AccountSettingComponent} from './my-account/account-setting/account-setting.component';
 import {DepositComponent} from './my-account/deposit/deposit.component';
 import {WithdrawComponent} from './my-account/withdraw/withdraw.component';
+
+import {AuthGuardService} from './shared/services/auth-guard.service';
+
 // 组件之间的路由关系
 export const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -32,6 +35,7 @@ export const routes: Routes = [
   {path: 'aboutUs', component: AboutUsComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'ipsForm', component: IpsFormComponent},
+  {path: 'auth', component: AuthenticationComponent},
   {
     path: 'account', component: MyRootComponent, children: [
       {path: '', component: OverviewComponent},
@@ -42,10 +46,9 @@ export const routes: Routes = [
       {path: 'record', component: RecordComponent},
       {path: 'coupon', component: CouponComponent},
       {path: 'setting', component: AccountSettingComponent},
-      {path: 'auth', component: AuthenticationComponent},
       {path: 'deposit', component: DepositComponent},
       {path: 'withdraw', component: WithdrawComponent},
-    ]
+    ], canActivate: [AuthGuardService]
   }, {
     path: 'help', component: HelpComponent, children: [
       {path: '', component: LoginHelpComponent},
