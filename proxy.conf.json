@@ -1,7 +1,6 @@
 {
   "/xhr": {
-    "target": "http://w4tnvk.natappfree.cc",
-//    "target": "http://55eayq.natappfree.cc",
+    "target": "http://localhost:8080",
     "secure": false,
     "changeOrigin": true
   },

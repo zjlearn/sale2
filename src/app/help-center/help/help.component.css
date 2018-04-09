@@ -287,3 +287,39 @@ mat-divider {
   padding-top: 50px;
   margin-top: 20px;
 }
+
+/*.caret{*/
+  /*position: absolute;*/
+  /*right: 21px;*/
+  /*top: 23px;*/
+  /*-webkit-transform: rotate(0deg);*/
+  /*-moz-transform: rotate(0deg);*/
+  /*-ms-transform: rotate(0deg);*/
+  /*-o-transform: rotate(0deg);*/
+  /*transform: rotate(0deg);*/
+/*}*/
+
+/*对折叠导航的三角形的css*/
+.m-nav .navTitle .up-arrow {
+  font-size: 25px;
+  position: absolute;
+  right: 30px;
+  top: 0;
+  display: none;
+  -webkit-transition: -webkit-transform .4s;
+  transition: transform .4s;
+  -ms-transition: -ms-transform .4s;
+  color: #e3e3e3;
+}
+.iconfont {
+  font-family: iconfont!important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: .2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.up-arrow {
+  display: inline-block;
+}
