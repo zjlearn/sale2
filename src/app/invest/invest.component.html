@@ -1,36 +1,36 @@
-<div class="container product-select-card">
-  <h3>项目筛选</h3>
-  <div id ="filterSection">
+<div id="main" class="f-cb">
+  <div class="g-ctn">
+    <div class="container">
+      <h3>项目列表</h3>
+      <div id="filterSection">
+        <label>借款类型: </label>
+        <button mat-button>不限</button>
+        <button mat-button>房产抵押</button>
+        <button mat-button>车辆抵押</button>
+        <button mat-button>企业贷</button>
+        <br>
+        <label>项目状态: </label>
+        <button mat-button>不限</button>
+        <button mat-button>投资中</button>
+        <button mat-button>已满标</button>
+        <button mat-button>还款中</button>
+        <br>
+        <label>投资期限: </label>
+        <button mat-button>不限</button>
+        <button mat-button>1个月以内</button>
+        <button mat-button>1-3个月</button>
+        <button mat-button>4-6个月</button>
+      </div>
 
-    <!--<div class="btn-group" role="group" aria-label="Basic example">-->
-      <!--<button type="button" class="btn btn-secondary">Left</button>-->
-      <!--<button type="button" class="btn btn-secondary">Middle</button>-->
-      <!--<button type="button" class="btn btn-secondary">Middle</button>-->
-    <!--</div>-->
+      <div class="item-list">
 
-    <label>借款类型: </label>
-    <button mat-button>不限</button>
-    <button mat-button>房产抵押</button>
-    <button mat-button>车辆抵押</button>
-    <button mat-button>企业贷</button>
-    <br>
-    <label>项目状态: </label>
-    <button mat-button>不限</button>
-    <button mat-button>投资中</button>
-    <button mat-button>已满标</button>
-    <button mat-button>还款中</button>
-    <br>
-    <label>投资期限: </label>
-    <button mat-button>不限</button>
-    <button mat-button>1个月以内</button>
-    <button mat-button>1-3个月</button>
-    <button mat-button>4-6个月</button>
+      </div>
+
+      <!--分页-->
+      <mat-paginator itemsPerPageLabel="每页记录数" [length]="100"
+                     [pageSize]="10"
+                     [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+    </div>
   </div>
-
-
-  <app-list-products></app-list-products>
-  <!--分页-->
-  <mat-paginator  itemsPerPageLabel= "每页记录数" [length]="100"
-                  [pageSize]="10"
-                  [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
 </div>
+

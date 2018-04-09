@@ -1,65 +1,67 @@
 <!--可以实现登录和注册的双重功能-->
-<mat-tab-group class="box clearfix">
-  <mat-tab label="登录">
-    <mat-card class="login-container">
-      <!--<mat-toolbar>-->
-        <!--<div class="mat-toolbar-tools">-->
+<div id="main" class="f-cb">
+  <div class="g-ctn">
+    <mat-tab-group class="box clearfix">
+      <mat-tab label="登录">
+        <mat-card class="login-container">
+          <!--<mat-toolbar>-->
+          <!--<div class="mat-toolbar-tools">-->
           <!--<h2><span>登录</span></h2>-->
-        <!--</div>-->
-      <!--</mat-toolbar>-->
+          <!--</div>-->
+          <!--</mat-toolbar>-->
 
-      <mat-card-content>
-        <form (ngSubmit)="login()" noValidate [formGroup]="loginForm">
-          <mat-form-field>
-            <input matInput placeholder="手机号或者邮箱" formControlName="mobile">
-          </mat-form-field>
+          <mat-card-content>
+            <form (ngSubmit)="login()" noValidate [formGroup]="loginForm">
+              <mat-form-field>
+                <input matInput placeholder="手机号或者邮箱" formControlName="mobile">
+              </mat-form-field>
 
-          <mat-form-field>
-            <input matInput placeholder="请输入密码" [type]="hide ? 'password' : 'text'"
-                   formControlName="password">
-            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
-          </mat-form-field>
+              <mat-form-field>
+                <input matInput placeholder="请输入密码" [type]="hide ? 'password' : 'text'"
+                       formControlName="password">
+                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+              </mat-form-field>
 
-          <div class="m-agreements">
-            我已阅读并同意
-            <a href="https://www.lmlc.com/wap/page/product/preview/login/protocal.html"
-               target="_blank">《该理财平台服务协议》</a>
-          </div>
+              <div class="m-agreements">
+                我已阅读并同意
+                <a href="https://www.lmlc.com/wap/page/product/preview/login/protocal.html"
+                   target="_blank">《该理财平台服务协议》</a>
+              </div>
 
-          <button mat-raised-button color="primary" type="submit" class="mainButton">立即登录</button>
-        </form>
-      </mat-card-content>
-    </mat-card>
-  </mat-tab>
-  <mat-tab label="注册">
-    <mat-card class="login-container">
+              <button mat-raised-button color="primary" type="submit" class="mainButton">立即登录</button>
+            </form>
+          </mat-card-content>
+        </mat-card>
+      </mat-tab>
+      <mat-tab label="注册">
+        <mat-card class="login-container">
 
-      <mat-card-content>
-        <form (ngSubmit)="register()" noValidate [formGroup]="loginForm">
-          <mat-form-field>
-            <input matInput placeholder="请输入手机号" formControlName="mobile">
-          </mat-form-field>
+          <mat-card-content>
+            <form (ngSubmit)="register()" noValidate [formGroup]="loginForm">
+              <mat-form-field>
+                <input matInput placeholder="请输入手机号" formControlName="mobile">
+              </mat-form-field>
 
-          <mat-form-field class="mat-block" id="verifyform">
-            <input matInput placeholder="短信验证码" formControlName="verifyCode">
-            <button mat-button (click)="getVerifyCode()" class="verifybutton">获取验证码</button>
-          </mat-form-field>
+              <mat-form-field class="mat-block" id="verifyform">
+                <input matInput placeholder="短信验证码" formControlName="verifyCode">
+                <button mat-button (click)="getVerifyCode()" class="verifybutton">获取验证码</button>
+              </mat-form-field>
 
-          <mat-form-field>
-            <input matInput placeholder="密码为8~16位数字，字母或符号的组合" [type]="hide ? 'password' : 'text'"
-                   formControlName="password">
-            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
-          </mat-form-field>
-
-          <div class="m-agreements">
-            我已阅读并同意
-            <a href="https://www.lmlc.com/wap/page/product/preview/login/protocal.html"
-               target="_blank">《该理财平台服务协议》</a>
-          </div>
-
-          <button mat-raised-button color="primary" type="submit" class="mainButton">立即注册</button>
-        </form>
-      </mat-card-content>
-    </mat-card>
-  </mat-tab>
-</mat-tab-group>
+              <mat-form-field>
+                <input matInput placeholder="密码为8~16位数字，字母或符号的组合" [type]="hide ? 'password' : 'text'"
+                       formControlName="password">
+                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+              </mat-form-field>
+              <div class="m-agreements">
+                我已阅读并同意
+                <a href="https://www.lmlc.com/wap/page/product/preview/login/protocal.html"
+                   target="_blank">《该理财平台服务协议》</a>
+              </div>
+              <button mat-raised-button color="primary" type="submit" class="mainButton">立即注册</button>
+            </form>
+          </mat-card-content>
+        </mat-card>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>

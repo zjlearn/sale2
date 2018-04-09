@@ -559,3 +559,10 @@ b {
   min-height: -webkit-calc(100vh - 100px - 181px);
   min-height: calc(100vh - 100px - 181px);
 }
+
+.g-ctn {
+  display: block;
+  width: 1180px;
+  margin: 0 auto;
+  background: #FFF;
+}

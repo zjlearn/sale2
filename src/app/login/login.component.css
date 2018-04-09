@@ -32,3 +32,24 @@
 .m-agreements {
   font-size: 10px;
 }
+
+#main {
+  position: relative;
+  font-size: 14px;
+  min-height: inherit;
+  height: 640px;
+  background: center no-repeat;
+  background-image: url(//www.lmlccdn.com/www.lmlc.com.new/cdn/desktop/user/login/img/bg.2eaf7924b8.png);
+}
+
+#main .g-ctn {
+  background-color: transparent;
+  margin-right: auto;
+  margin-left: auto;
+}
+.g-ctn {
+  display: block;
+  width: 1180px;
+  margin: 0 auto;
+  background: #FFF;
+}
