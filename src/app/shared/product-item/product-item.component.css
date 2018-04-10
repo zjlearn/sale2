@@ -1,0 +1,110 @@
+a:link, a:visited {
+  text-decoration: none;
+  outline: 0;
+  outline: 0;
+}
+
+dl {
+  height: 69px;
+  font-size: 14px;
+  color: #333;
+  padding: 18px 0 22px;
+  border-bottom: 1px solid #eee;
+}
+dl .name {
+  width: 240px;
+  padding-left: 40px;
+}
+
+dl dd {
+  padding-right: 20px;
+}
+
+ dl .title {
+  font-size: 14px;
+}
+dl .tit {
+  font-size: 18px;
+  color: #333;
+  line-height: 38px;
+}
+
+
+.f-nowrap {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: keep-all;
+  word-wrap: normal;
+}
+
+.u-tag {
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+.u-tag-fixed {
+  color: #FFF;
+  background: #4990e2;
+}
+
+.u-tag {
+  display: inline-block;
+  padding: 0 4px;
+  font-size: 12px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+}
+
+ dl .desc {
+  font-size: 12px;
+  color: #999;
+  line-height: 30px;
+}
+
+.u-tag-feature {
+  min-width: 30px;
+  border: 1px solid #7c9fe3;
+  color: #7c9fe3;
+}
+
+dl .rate {
+  width: 130px;
+  padding-right: 0;
+}
+
+dl .highlight {
+  color: #f60;
+  font-size: 24px;
+}
+
+dl .tit {
+  font-size: 18px;
+  color: #333;
+  line-height: 38px;
+}
+
+dl .day {
+  width: 130px;
+  text-align: center;
+}
+
+ dl .limit {
+  width: 80px;
+  text-align: center;
+}
+
+
+dl .process {
+  width: 100px;
+  padding: 0;
+  text-align: center;
+}
+
+ dl .oper {
+   padding-right: 25px;
+   padding-top: 17px;
+   width: 150px;
+   text-align: center;
+   position: relative;
+ }

@@ -45,6 +45,7 @@ import { AccountSettingComponent } from './my-account/account-setting/account-se
 import { DepositComponent } from './my-account/deposit/deposit.component';
 import { WithdrawComponent } from './my-account/withdraw/withdraw.component';
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
+import { ProductItemComponent } from './shared/product-item/product-item.component';
 
 
 
@@ -83,7 +84,8 @@ import {HashLocationStrategy, LocationStrategy} from '@angular/common';
     CouponComponent,
     AccountSettingComponent,
     DepositComponent,
-    WithdrawComponent
+    WithdrawComponent,
+    ProductItemComponent
   ],
   imports: [
     BrowserModule,
