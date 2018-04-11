@@ -1,18 +1,12 @@
-.product-select-card{
-  width: 90%;
-  margin: 10px auto;
-}
 
-h3{
+h3 {
   text-align: center;
   border-bottom: red solid 1px;
 }
 
-#filterSection{
-  margin: 10px auto;
-  border-bottom: red solid 1px;
+#filterSection {
+  margin: 20px auto;
 }
-
 
 /*下面开始新的css样式*/
 #main {
@@ -20,3 +14,14 @@ h3{
   color: #777E86;
 }
 
+#filterSection button {
+  margin-left: 20px;
+}
+
+#filterSection a {
+  margin-left: 20px;
+}
+
+.selected {
+  background-color: #0a6feb;
+}

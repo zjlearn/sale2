@@ -6,6 +6,11 @@ export class ProductService {
   getProducts(): Product[] {
     return products;
   }
+
+  getProductsByCond(type: number, status: number, durationLowBound: number, durationUpBound: number,
+                    pageIndex: number, pageSize: number): Product[] {
+    return products;
+  }
 }
 
 const products: Product[] = [

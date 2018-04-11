@@ -3,28 +3,36 @@
     <div class="container">
       <h3>项目列表</h3>
       <div id="filterSection">
-        <label>借款类型: </label>
-        <button mat-button>不限</button>
-        <button mat-button>房产抵押</button>
-        <button mat-button>车辆抵押</button>
-        <button mat-button>企业贷</button>
-        <br>
-        <label>项目状态: </label>
-        <button mat-button>不限</button>
-        <button mat-button>投资中</button>
-        <button mat-button>已满标</button>
-        <button mat-button>还款中</button>
-        <br>
-        <label>投资期限: </label>
-        <button mat-button>不限</button>
-        <button mat-button>1个月以内</button>
-        <button mat-button>1-3个月</button>
-        <button mat-button>4-6个月</button>
+        <div class="">
+          <label>借款类型: </label>
+          <button mat-button [ngClass]="{'selected': selectedType==0}">不限</button>
+          <button [ngClass]="{'selected': selectedType==1}" mat-button>房产抵押</button>
+          <button mat-button [ngClass]="{'selected': selectedType==2}">车辆抵押</button>
+          <button mat-button [ngClass]="{'selected': selectedType==3}">企业贷</button>
+        </div>
+        <div>
+          <label>项目状态: </label>
+          <button mat-button [ngClass]="{'selected': selectedStatus==0}">不限</button>
+          <button mat-button [ngClass]="{'selected': selectedStatus==1}">投资中</button>
+          <button mat-button [ngClass]="{'selected': selectedStatus==2}">已满标</button>
+          <button mat-button [ngClass]="{'selected': selectedStatus==3}">还款中</button>
+        </div>
+        <div>
+          <label>投资期限: </label>
+          <button mat-button [ngClass]="{'selected': selectedDuration==0}">不限</button>
+          <button mat-button [ngClass]="{'selected': selectedDuration==1}">1个月以内</button>
+          <button mat-button [ngClass]="{'selected': selectedDuration==2}">1-3个月</button>
+          <button mat-button [ngClass]="{'selected': selectedDuration==3}">4-6个月</button>
+        </div>
+
       </div>
 
       <div class="item-list">
         <div>
           <div>
+            <app-product-item></app-product-item>
+            <app-product-item></app-product-item>
+            <app-product-item></app-product-item>
             <app-product-item></app-product-item>
           </div>
 
