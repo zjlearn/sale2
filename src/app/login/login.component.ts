@@ -39,6 +39,7 @@ export class LoginComponent implements OnInit {
       console.log(data);
     });
     console.log('登录成功！！');
+    this.userService.getUser();
     // 登录完成之后，跳转到主页
     this.router.navigate(['/home']);
   }

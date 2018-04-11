@@ -5,24 +5,24 @@
       <div id="filterSection">
         <div class="">
           <label>借款类型: </label>
-          <button mat-button [ngClass]="{'selected': selectedType==0}">不限</button>
-          <button [ngClass]="{'selected': selectedType==1}" mat-button>房产抵押</button>
-          <button mat-button [ngClass]="{'selected': selectedType==2}">车辆抵押</button>
-          <button mat-button [ngClass]="{'selected': selectedType==3}">企业贷</button>
+          <button mat-button (click)="selectType(0)" [ngClass]="{'selected': selectedType==0}">不限</button>
+          <button mat-button (click)="selectType(1)" [ngClass]="{'selected': selectedType==1}" >房产抵押</button>
+          <button mat-button (click)="selectType(2)" [ngClass]="{'selected': selectedType==2}">车辆抵押</button>
+          <button mat-button (click)="selectType(3)" [ngClass]="{'selected': selectedType==3}">企业贷</button>
         </div>
         <div>
           <label>项目状态: </label>
-          <button mat-button [ngClass]="{'selected': selectedStatus==0}">不限</button>
-          <button mat-button [ngClass]="{'selected': selectedStatus==1}">投资中</button>
-          <button mat-button [ngClass]="{'selected': selectedStatus==2}">已满标</button>
-          <button mat-button [ngClass]="{'selected': selectedStatus==3}">还款中</button>
+          <button mat-button (click)="selectStatus(0)" [ngClass]="{'selected': selectedStatus==0}">不限</button>
+          <button mat-button (click)="selectStatus(1)" [ngClass]="{'selected': selectedStatus==1}">投资中</button>
+          <button mat-button (click)="selectStatus(2)" [ngClass]="{'selected': selectedStatus==2}">已满标</button>
+          <button mat-button (click)="selectStatus(3)" [ngClass]="{'selected': selectedStatus==3}">还款中</button>
         </div>
         <div>
           <label>投资期限: </label>
-          <button mat-button [ngClass]="{'selected': selectedDuration==0}">不限</button>
-          <button mat-button [ngClass]="{'selected': selectedDuration==1}">1个月以内</button>
-          <button mat-button [ngClass]="{'selected': selectedDuration==2}">1-3个月</button>
-          <button mat-button [ngClass]="{'selected': selectedDuration==3}">4-6个月</button>
+          <button mat-button (click)="selectDuration(0)" [ngClass]="{'selected': selectedDuration==0}">不限</button>
+          <button mat-button (click)="selectDuration(1)" [ngClass]="{'selected': selectedDuration==1}">1个月以内</button>
+          <button mat-button (click)="selectDuration(2)" [ngClass]="{'selected': selectedDuration==2}">1-3个月</button>
+          <button mat-button (click)="selectDuration(3)" [ngClass]="{'selected': selectedDuration==3}">4-6个月</button>
         </div>
 
       </div>

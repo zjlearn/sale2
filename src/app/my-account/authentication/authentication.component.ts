@@ -35,7 +35,7 @@ export class AuthenticationComponent implements OnInit {
    * 实名认证的过程， 该过程会请求后端auth服务， 返回相应的sign request等信息，
    */
   auth() {
-    this.http.post<Result>('http://localhost:4200/xhr/ips/userRegister', this.authForm.value).subscribe(result => {
+    this.http.post<Result>('http://localhost:4200/xhr/ips/userRegister/sign', this.authForm.value).subscribe(result => {
       this.sign = result.data['sign'];
       this.request = result.data['request'];
       this.operationType = result.data['operationType'];
