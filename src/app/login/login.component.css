@@ -16,10 +16,6 @@
   width: 100%;
 }
 
-.mat-form-field {
-  display: block;
-}
-
 .mainButton {
   width: 300px;
   margin: 10px auto;
@@ -47,9 +43,29 @@
   margin-right: auto;
   margin-left: auto;
 }
+
 .g-ctn {
   display: block;
   width: 1180px;
   margin: 0 auto;
   background: #FFF;
+}
+
+#verify-warpper {
+  position: relative;
+  width: 300px;
+}
+
+#verifyform {
+  float: left;
+  width: 60%;
+}
+
+.verifybutton {
+  float: right;
+  width: 30%;
+}
+
+.mat-form-field {
+  width: 100%;
 }

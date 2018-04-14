@@ -32,7 +32,7 @@ export class WithdrawComponent implements OnInit {
   }
 
   withdraw() {
-    this.http.post<Result>('http://localhost:4200/xhr/ips/deposit/sign', this.withdrawForm.value).subscribe(result => {
+    this.http.post<Result>('http://localhost:4200/xhr/ips/withdraw/sign', this.withdrawForm.value).subscribe(result => {
       this.sign = result.data['sign'];
       this.request = result.data['request'];
       this.operationType = result.data['operationType'];
