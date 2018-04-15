@@ -6,43 +6,36 @@
     <div class="mainForm">
       <mat-card class="login-container">
         <mat-card-title>
-          借款申请单
+          借款申请
         </mat-card-title>
         <mat-divider></mat-divider>
         <mat-card-content>
           <form [formGroup]="loanInfoForm" (ngSubmit)="loan()">
             <mat-form-field>
-              <mat-select placeholder="借款类型" formControlName="loanType">
-                <mat-option value="1">房贷</mat-option>
-                <mat-option value="2">车贷</mat-option>
-                <mat-option value="4">企业贷款</mat-option>
-              </mat-select>
-            </mat-form-field>
-
-            <mat-form-field>
               <input matInput placeholder="借款金额" formControlName="loanAmount">
             </mat-form-field>
 
             <mat-form-field>
-              <input matInput placeholder="预期年化收益" formControlName="expectRate">
+              <input matInput placeholder="借款周期, 单位月" formControlName="duration">
             </mat-form-field>
 
             <mat-form-field>
-              <mat-select placeholder="借款期限" formControlName="duration">
-                <mat-option value="1">1个月</mat-option>
-                <mat-option value="2">2个月</mat-option>
-              </mat-select>
+              <input matInput placeholder="借款原因" formControlName="loanRemark">
             </mat-form-field>
 
             <mat-form-field>
-              <input matInput placeholder="申请人姓名" formControlName="realName">
+              <input matInput placeholder="申请人姓名" formControlName="userName">
             </mat-form-field>
 
             <mat-form-field>
-              <input matInput placeholder="手机验证码" formControlName="verifyCode">
+              <input matInput placeholder="手机号码" formControlName="mobile">
+            </mat-form-field>
+
+            <mat-form-field>
+              <input matInput placeholder="所在城市区域" formControlName="district">
             </mat-form-field>
             <div>
-              <button mat-button mat-raised-button="info">下一步</button>
+              <button mat-button mat-raised-button="info">提交</button>
             </div>
           </form>
         </mat-card-content>

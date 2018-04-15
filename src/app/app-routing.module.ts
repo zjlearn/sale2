@@ -24,10 +24,11 @@ import {DepositComponent} from './my-account/deposit/deposit.component';
 import {WithdrawComponent} from './my-account/withdraw/withdraw.component';
 
 import {AuthGuardService} from './shared/services/auth-guard.service';
+import {LoginGuardService} from './shared/services/LoginGuardService';
 
 // 组件之间的路由关系
 export const routes: Routes = [
-  {path: 'login', component: LoginComponent},
+  {path: 'login', component: LoginComponent, canActivate: [LoginGuardService]},
   {path: 'register', component: RegisterComponent},
   {path: 'home', component: HomeComponent},
   {path: 'invest', component: InvestComponent},

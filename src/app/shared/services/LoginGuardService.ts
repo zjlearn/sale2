@@ -1,16 +1,12 @@
-import {Injectable, OnInit} from '@angular/core';
 import {ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot} from '@angular/router';
-import {Observable} from 'rxjs/Observable';
-import {UserService} from './user.service';
 import {User} from '../models/User';
-import {Subscription} from 'rxjs/Subscription';
 import {Store} from '@ngrx/store';
+import {Injectable, OnInit} from '@angular/core';
+import {Observable} from 'rxjs/Observable';
 import {AppStore} from '../../reducer';
-import {DefaultAction} from '../../action';
-
 
 @Injectable()
-export class AuthGuardService implements CanActivate, OnInit {
+export class LoginGuardService implements CanActivate, OnInit {
 
   userState$: Observable<User>;
 
@@ -25,11 +21,11 @@ export class AuthGuardService implements CanActivate, OnInit {
     // 获取用户的信息
     let user = null;
     this.userState$.subscribe(data => user = data);
-    console.log(user);
-    if (user) {
+    console.log('login guard is ' + user);
+    if (!user) {
       return true;
     }
-    this.route.navigate(['/login']);
+    this.route.navigate(['/home']);
     return false;
   }
 }

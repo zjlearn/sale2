@@ -13,7 +13,7 @@ export class WithdrawComponent implements OnInit {
   balance: number;
   charges: number;
   merchantID: string;
-  operationType = 'user.register';
+  operationType;
   request: string;
   sign: string;
 

@@ -1,1 +1,31 @@
-<!--消息中心的代码-->
+<!--借款处理-->
+<div>
+  <h1>jieh</h1>
+  <div>
+    <button mat-raised-button="" (click)="regProject()">loan </button>
+  </div>
+</div>
+
+<!--下面是默认的提交表单-->
+<div class="ips-form" style="display: none">
+  <form ngNoForm method="post" id="ipsForm" action="http://113.207.54.122:8011/p2p-dep/gateway.htm">
+    <ng-template>IPS页面表单提交</ng-template>
+    <mat-form-field>
+      <input matInput placeholder="merchantID" name="merchantID" [(ngModel)]="merchantID" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="operationType" name='operationType' [(ngModel)]="operationType" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="request" name='request' [(ngModel)]="request" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="sign" name='sign' [(ngModel)]="sign" required>
+    </mat-form-field>
+    <div>
+      <button mat-button type="submit"> 提交</button>
+    </div>
+  </form>
+</div>
+
+
