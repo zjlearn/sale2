@@ -32,10 +32,24 @@
         <mat-card class="login-container">
 
           <mat-card-content>
-            <form (ngSubmit)="register()" noValidate [formGroup]="loginForm">
+            <form (ngSubmit)="register()" noValidate [formGroup]="registerForm">
 
               <mat-form-field>
-                <input matInput placeholder="请输入手机号" formControlName="mobile">
+                <mat-select placeholder="注册类型" formControlName="userType">
+                  <mat-option [value]="1">个人</mat-option>
+                  <mat-option [value]="2">企业</mat-option>
+                </mat-select>
+              </mat-form-field>
+
+              <mat-form-field>
+                <mat-select placeholder="用户类型" formControlName="userRole">
+                  <mat-option [value]=1>出借人</mat-option>
+                  <mat-option [value]=2>借款人</mat-option>
+                </mat-select>
+              </mat-form-field>
+
+              <mat-form-field>
+                <input matInput placeholder="请输入手机号" formControlName="mobileNo">
               </mat-form-field>
 
               <div class="verify-warpper">

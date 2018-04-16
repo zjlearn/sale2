@@ -20,6 +20,7 @@ import {Result} from '../shared/models/Result';
 export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
+  registerForm: FormGroup;
   user: User;
 
   constructor(private http: HttpClient, private fb: FormBuilder, private router: Router,
@@ -29,6 +30,14 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.loginForm = this.fb.group({
       mobile: ['', [Validators.required, Validators.minLength(2)]],
+      password: ['', Validators.required],
+      verifyCode: ['', Validators.required]
+    });
+
+    this.registerForm = this.fb.group({
+      userType: [''],
+      userRole: [''],
+      mobileNo: ['', [Validators.required, Validators.minLength(2)]],
       password: ['', Validators.required],
       verifyCode: ['', Validators.required]
     });
@@ -56,13 +65,8 @@ export class LoginComponent implements OnInit {
 
   // 以form表单的方式进行post提交
   register() {
-    console.log('开始注册！！');
-    const formModel = this.loginForm.value;
-    const formData: FormData = new FormData();
-    formData.append('mobile', formModel.mobile);
-    formData.append('password', formModel.password);
-    formData.append('inviteCode', formModel.inviteCode);
-    this.http.post('http://localhost:4200/xhr/user/register', formData).subscribe(data => {
+    console.log('开始注册！！' + this.registerForm.value.userRole);
+    this.http.post('http://localhost:4200/xhr/user/register', this.registerForm.value).subscribe(data => {
       // Read the result field from the JSON response.
       console.log(data);
     });
